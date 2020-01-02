@@ -8,8 +8,12 @@
   </thead>
   <tbody>
     <tr>
-      <td><code>gh-pages</code></td>
-      <td>https://davidhamicev.github.io/Mr-Burger/</td>
+      <td><code>Перечень сверстанных страниц</code></td>
+      <td>http://riforma-front.dev.odva.pro/pages-list.html</td>
+    </tr>
+    <tr>
+      <td><code>Тестовый сервер</code></td>
+      <td>http://riforma.dev.odva.pro</td>
     </tr>
     <tr>
       <td><code>cd path/to/</code></td>
