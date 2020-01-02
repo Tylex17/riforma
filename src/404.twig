@@ -1,0 +1,21 @@
+{# index.twig #}
+{% extends "layouts/layout.twig" %}
+
+{% block page %}
+	<div class="error">
+		<div class="error__image">
+			<picture>
+				<source data-srcset="img/assets/error-404.png, img/assets/error-404@2x.png 2x">
+				<img data-src="img/assets/error-404.png" class="lazy-image" alt="">
+			</picture>
+		</div>
+		<div class="error__desc">
+			<h2 class="error__title">404 <br> Страница не найдена</h2>
+			<div class="error__text">
+				Кажется, что-то пошло не&nbsp;так. Запрашиваемая&nbsp;страницане существует или&nbsp;была удалена.
+				Попробуйте вернуться <a href="/" class="error__link">на&nbsp;главную</a>
+				или&nbsp;обратиться в&nbsp;<a href="/" class="error__link">службу поддержки</a>
+			</div>
+		</div>
+	</div>
+{% endblock %}

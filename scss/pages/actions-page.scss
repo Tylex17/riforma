@@ -1,0 +1,18 @@
+.actions-page
+{
+	padding-bottom: 54px;
+}
+@media (max-width: $medium)
+{
+	.actions-page
+	{
+		padding-bottom: 34px;
+	}
+}
+@media (max-width: $mobile)
+{
+	.actions-page
+	{
+		padding-bottom: 5px;
+	}
+}

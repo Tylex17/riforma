@@ -1,0 +1,11 @@
+{# actions-page.twig #}
+{% extends "layouts/layout.twig" %}
+
+{% block page %}
+	{% include "blocks/breadcrumbs.twig" %}
+	<div class="actions-page">
+		{% include 'blocks/actions.twig' with {'rowsCount': 4, 'title':'Акции и события', 'modifier':'actions__row_margin'} %}
+	</div>
+	{% include "./blocks/popup-actions.twig" %}
+	{% include "./blocks/popup-second-actions.twig" %}
+{% endblock %}

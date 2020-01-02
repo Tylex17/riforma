@@ -1,0 +1,316 @@
+{# index.twig #}
+{% extends "layouts/layout.twig" %}
+{% block page %}
+<div class="registration">
+	<div class="registration-wr">
+		{% include "blocks/breadcrumbs.twig" %}
+		<h2 class="section__title registration__title">
+			Создайте свой аккаунт и&nbsp;получите скидку<br class="registration__title_br_hide" />
+			10% на&nbsp;первую покупку
+		</h2>
+		<form onsubmit="o2.registration.send(this, event)" novalidate>
+			<div class="person-info">
+				<div class="section__title person-info__title">
+					Информация о покупателе
+				</div>
+				<div class="person-info__body _tabs-container">
+					<div class="person-info__type">
+						<label class="o-radio person-info__type-item" onclick="o2.tabs.open(this, '1')">
+							<input type="radio" class="o-radio__input" name="user" checked>
+							<div class="o-radio__body person-info__type-item_center">
+								<span class="o-radio__box person-info__radio"></span>
+								<span class="o-radio__text">Частное лицо</span>
+							</div>
+						</label>
+						<label class="o-radio person-info__type-item" onclick="o2.tabs.open(this, '2')">
+							<input type="radio" class="o-radio__input" name="user">
+							<div class="o-radio__body person-info__type-item_center">
+								<span class="o-radio__box person-info__radio"></span>
+								<span class="o-radio__text">Компания</span>
+							</div>
+						</label>
+					</div>
+					<div class="tab tab_open" data-tab-id="1">
+						<div class="person-info__row">
+							<div class="person-info__row-left">
+								<label class="input-wr person-info__input">
+									<input type="text" class="input _required" value="" onkeyup="this.setAttribute('value', this.value);" onchange="this.setAttribute('value', this.value);">
+									<div class="input__label">Имя*</div>
+									<div class="input__sub-text input__sub-text_text">Введите ваше имя</div>
+									<div class="input__sub-text input__sub-text_error"></div>
+								</label>
+							</div>
+							<div class="person-info__row-right">
+								<label class="input-wr person-info__input">
+									<input type="text" class="input _required" value="" onkeyup="this.setAttribute('value', this.value);" onchange="this.setAttribute('value', this.value);">
+									<div class="input__label">Фамилия*</div>
+									<div class="input__sub-text input__sub-text_text">Введите вашу фамилию</div>
+									<div class="input__sub-text input__sub-text_error"></div>
+								</label>
+							</div>
+						</div>
+						<div class="person-info__row">
+							<div class="person-info__row-left">
+								<label class="input-wr person-info__input">
+									<input type="email" class="input _required _email" value="" onkeyup="this.setAttribute('value', this.value);" onchange="this.setAttribute('value', this.value);">
+									<div class="input__label">E-mail*</div>
+									<div class="input__sub-text input__sub-text_text">Введите ваш email</div>
+									<div class="input__sub-text input__sub-text_error"></div>
+								</label>
+							</div>
+							<div class="person-info__row-right">
+								<label class="input-wr person-info__input">
+									<input type="tel" class="input _required _phone-mask" value="" onkeyup="this.setAttribute('value', this.value);" onchange="this.setAttribute('value', this.value);">
+									<div class="input__label">Телефон*</div>
+									<div class="input__sub-text input__sub-text_text">Введите ваш телефон</div>
+									<div class="input__sub-text input__sub-text_error"></div>
+								</label>
+							</div>
+						</div>
+						<div class="person-info__row">
+							<div class="person-info__row-left">
+								<label class="input-wr person-info__input">
+									<input type="password" class="input _required _passwords" value="" onkeyup="this.setAttribute('value', this.value);" onchange="this.setAttribute('value', this.value);">
+									<div class="input__label">Пароль*</div>
+									<div class="input__sub-text input__sub-text_text">Введите пароль</div>
+									<div class="input__sub-text input__sub-text_error"></div>
+								</label>
+							</div>
+							<div class="person-info__row-right">
+								<label class="input-wr person-info__input">
+									<input type="password" class="input _required _passwords" value="" onkeyup="this.setAttribute('value', this.value);" onchange="this.setAttribute('value', this.value);">
+									<div class="input__label">Повторите пароль*</div>
+									<div class="input__sub-text input__sub-text_text">Повторите пароль</div>
+									<div class="input__sub-text input__sub-text_error"></div>
+								</label>
+							</div>
+						</div>
+						<div class="person-info__checkbox_mob">
+							<label class="o-checkbox">
+								<input type="checkbox" class="o-radio__input" name="news">
+								<div class="o-checkbox__body">
+									<span class="o-checkbox__box"></span>
+									<span class="o-checkbox__text">Подписаться на новостную рассылку</span>
+								</div>
+							</label>
+						</div>
+						<div class="section__title person-info__title person-info__title_mob">
+							Заполните контактную <br>
+							информация, чтобы мы могли <br>
+							доставить заказ
+						</div>
+						<div class="person-info__row">
+							<div class="person-info__row-left">
+								<label class="input-wr person-info__input">
+									<input type="text" class="input _required" value="" onkeyup="this.setAttribute('value', this.value);" onchange="this.setAttribute('value', this.value);">
+									<div class="input__label">Город*</div>
+									<div class="input__sub-text input__sub-text_text">Введите ваш город</div>
+									<div class="input__sub-text input__sub-text_error"></div>
+								</label>
+							</div>
+							<div class="person-info__row-right">
+								<label class="input-wr person-info__input">
+									<input type="text" class="input _required" value="" onkeyup="this.setAttribute('value', this.value);" onchange="this.setAttribute('value', this.value);">
+									<div class="input__label">Улица*</div>
+									<div class="input__sub-text input__sub-text_text">Введите ваш улицу</div>
+									<div class="input__sub-text input__sub-text_error"></div>
+								</label>
+							</div>
+						</div>
+						<div class="person-info__row">
+							<div class="person-info__row-left">
+								<div class="person-info__input_group">
+									<label class="input-wr person-info__input person-info__input_small">
+										<input type="text" class="input _required" value="" onkeyup="this.setAttribute('value', this.value);" onchange="this.setAttribute('value', this.value);">
+										<div class="input__label">Дом</div>
+										<div class="input__sub-text input__sub-text_text">Введите ваш дом</div>
+										<div class="input__sub-text input__sub-text_error"></div>
+									</label>
+									<label class="input-wr person-info__input person-info__input_small">
+										<input type="text" class="input _required" value="" onkeyup="this.setAttribute('value', this.value);" onchange="this.setAttribute('value', this.value);">
+										<div class="input__label">Корпус</div>
+										<div class="input__sub-text input__sub-text_text">Введите ваш корпус</div>
+										<div class="input__sub-text input__sub-text_error"></div>
+									</label>
+								</div>
+							</div>
+							<div class="person-info__row-right">
+								<div class="person-info__input_group">
+									<label class="input-wr person-info__input person-info__input_small">
+										<input type="text" class="input _required" value="" onkeyup="this.setAttribute('value', this.value);" onchange="this.setAttribute('value', this.value);">
+										<div class="input__label">Этаж</div>
+										<div class="input__sub-text input__sub-text_text">Введите ваш этаж</div>
+										<div class="input__sub-text input__sub-text_error"></div>
+									</label>
+									<label class="input-wr person-info__input person-info__input_small">
+										<input type="text" class="input" value="" onkeyup="this.setAttribute('value', this.value);" onchange="this.setAttribute('value', this.value);">
+										<div class="input__label">Квартира/офис</div>
+										<div class="input__sub-text input__sub-text_text">Введите квартиру или офис</div>
+										<div class="input__sub-text input__sub-text_error"></div>
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tab" data-tab-id="2">
+						<div class="person-info__row">
+							<div class="person-info__row-left">
+								<label class="input-wr person-info__input">
+									<input type="text" class="input _required" value="" onkeyup="this.setAttribute('value', this.value);" onchange="this.setAttribute('value', this.value);">
+									<div class="input__label">Имя*</div>
+									<div class="input__sub-text input__sub-text_text">Введите ваше имя</div>
+									<div class="input__sub-text input__sub-text_error"></div>
+								</label>
+							</div>
+							<div class="person-info__row-right">
+								<label class="input-wr person-info__input">
+									<input type="text" class="input _required" value="" onkeyup="this.setAttribute('value', this.value);" onchange="this.setAttribute('value', this.value);">
+									<div class="input__label">Фамилия*</div>
+									<div class="input__sub-text input__sub-text_text">Введите вашу фамилию</div>
+									<div class="input__sub-text input__sub-text_error"></div>
+								</label>
+							</div>
+						</div>
+						<div class="person-info__row">
+							<div class="person-info__row-left">
+								<label class="input-wr person-info__input">
+									<input type="email" class="input _required _email" value="" onkeyup="this.setAttribute('value', this.value);" onchange="this.setAttribute('value', this.value);">
+									<div class="input__label">E-mail*</div>
+									<div class="input__sub-text input__sub-text_text">Введите ваш email</div>
+									<div class="input__sub-text input__sub-text_error"></div>
+								</label>
+							</div>
+							<div class="person-info__row-right">
+								<label class="input-wr person-info__input">
+									<input type="tel" class="input _required _phone-mask" value="" onkeyup="this.setAttribute('value', this.value);" onchange="this.setAttribute('value', this.value);">
+									<div class="input__label">Телефон*</div>
+									<div class="input__sub-text input__sub-text_text">Введите ваш телефон</div>
+									<div class="input__sub-text input__sub-text_error"></div>
+								</label>
+							</div>
+						</div>
+						<div class="person-info__row">
+							<div class="person-info__row-left">
+								<label class="input-wr person-info__input">
+									<input type="password" class="input _required _passwords" value="" onkeyup="this.setAttribute('value', this.value);" onchange="this.setAttribute('value', this.value);">
+									<div class="input__label">Пароль*</div>
+									<div class="input__sub-text input__sub-text_text">Введите пароль</div>
+									<div class="input__sub-text input__sub-text_error"></div>
+								</label>
+							</div>
+							<div class="person-info__row-right">
+								<label class="input-wr person-info__input">
+									<input type="password" class="input _required _passwords" value="" onkeyup="this.setAttribute('value', this.value);" onchange="this.setAttribute('value', this.value);">
+									<div class="input__label">Повторите пароль*</div>
+									<div class="input__sub-text input__sub-text_text">Повторите пароль</div>
+									<div class="input__sub-text input__sub-text_error"></div>
+								</label>
+							</div>
+						</div>
+						<div class="person-info__checkbox_mob">
+							<label class="o-checkbox">
+								<input type="checkbox" class="o-radio__input" name="news">
+								<div class="o-checkbox__body">
+									<span class="o-checkbox__box"></span>
+									<span class="o-checkbox__text">Подписаться на новостную рассылку</span>
+								</div>
+							</label>
+						</div>
+						<div class="section__title person-info__title person-info__title_mob">
+							Заполните контактную <br>
+							информация, чтобы мы могли <br>
+							доставить заказ
+						</div>
+						<div class="person-info__row">
+							<div class="person-info__row-left">
+								<label class="input-wr person-info__input">
+									<input type="text" class="input _required" value="" onkeyup="this.setAttribute('value', this.value);" onchange="this.setAttribute('value', this.value);">
+									<div class="input__label">ИНН/КПП*</div>
+									<div class="input__sub-text input__sub-text_text">Введите ваш ИНН/КПП</div>
+									<div class="input__sub-text input__sub-text_error"></div>
+								</label>
+							</div>
+							<div class="person-info__row-right">
+								<label class="input-wr person-info__input">
+									<input type="text" class="input _required" value="" onkeyup="this.setAttribute('value', this.value);" onchange="this.setAttribute('value', this.value);">
+									<div class="input__label">Название компании*</div>
+									<div class="input__sub-text input__sub-text_text">Введите название компании</div>
+									<div class="input__sub-text input__sub-text_error"></div>
+								</label>
+							</div>
+						</div>
+						<div class="person-info__row">
+							<div class="person-info__row-left">
+								<label class="input-wr person-info__input">
+									<input type="text" class="input _required" value="" onkeyup="this.setAttribute('value', this.value);" onchange="this.setAttribute('value', this.value);">
+									<div class="input__label">Город</div>
+									<div class="input__sub-text input__sub-text_text">Введите ваш город</div>
+									<div class="input__sub-text input__sub-text_error"></div>
+								</label>
+							</div>
+							<div class="person-info__row-right">
+								<label class="input-wr person-info__input">
+									<input type="text" class="input _required" value="" onkeyup="this.setAttribute('value', this.value);" onchange="this.setAttribute('value', this.value);">
+									<div class="input__label">Улица</div>
+									<div class="input__sub-text input__sub-text_text">Введите улицу</div>
+									<div class="input__sub-text input__sub-text_error"></div>
+								</label>
+							</div>
+						</div>
+
+						<div class="person-info__row">
+							<div class="person-info__row-left">
+								<label class="input-wr person-info__input">
+									<input type="text" class="input _required" value="" onkeyup="this.setAttribute('value', this.value);" onchange="this.setAttribute('value', this.value);">
+									<div class="input__label">Почтовый индекс</div>
+									<div class="input__sub-text input__sub-text_text">Введите ваш почтовый индекс</div>
+									<div class="input__sub-text input__sub-text_error"></div>
+								</label>
+							</div>
+							<div class="person-info__row-right person-info-comment-wr">
+								<label class="textarea-wr person-info__input">
+									<textarea name="s" class="textarea person-info-comment" value="" placeholder="Введите здесь недостоющую информацию" onkeyup="this.setAttribute('value', this.value);" onchange="this.setAttribute('value', this.value);"></textarea>
+									<!-- <input type="text" class="input" > -->
+									<div class="input__label">Дополнительная информация</div>
+									<div class="input__sub-text input__sub-text_text">Введите квартиру или офис</div>
+									<div class="input__sub-text input__sub-text_error"></div>
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="person-info__bottom">
+					<div class="person-info__bottom-left">
+						<label class="o-checkbox">
+							<input type="checkbox" class="o-radio__input" name="news">
+							<div class="o-checkbox__body">
+								<span class="o-checkbox__box person-info__checkbox"></span>
+								<span class="o-checkbox__text">Подписаться на новостную рассылку</span>
+							</div>
+						</label>
+					</div>
+					<div class="person-info__bottom-right">
+						<div class="pesonal-info__policy">
+							*Подтверждая&nbsp;заказ,&nbsp;вы&nbsp;соглашаетесь<br />
+							с&nbsp;<a href="#">политикой конфиденциальности</a>
+						</div>
+						<button class="btn btn_accent person-info__btn" type="submit">
+							Регистрация
+						</button>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+	<div class="registration-message">
+		<h2 class="section__title registration-message__title">
+			Отлично! <br>
+			Надеемся, что вам понравится покупать <br>
+			на riforma.su
+		</h2>
+		<a href="/" class="btn btn_accent person-info__btn">
+			Начать покупки
+		</a>
+	</div>
+</div>
+{% endblock %}

@@ -1,0 +1,17 @@
+.popover-wr
+{
+	position: absolute;
+	top: 88px;
+	right: 0;
+	background-color: #fff;
+	z-index: 5;
+	display: none;
+}
+
+@media (max-width: $medium)
+{
+	.popover-wr
+	{
+		top: 84px;
+	}
+}

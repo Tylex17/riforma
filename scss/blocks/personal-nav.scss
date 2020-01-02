@@ -1,0 +1,39 @@
+.personal-nav-wr
+{
+	// padding-bottom: 20px;
+}
+.personal-nav-items
+{
+	padding-bottom: 38px;
+}
+.personal-nav-logout
+{
+	max-width: 140px;
+	height: 39px;
+}
+.personal-nav-item
+{
+	margin-bottom: 15px;
+	&:last-child
+	{
+		margin-bottom: 0;
+	}
+	a
+	{
+		display: block;
+		color: rgba(black, 0.35);
+		transition: 0.2s;
+		padding-top: 3px;
+		padding-bottom: 3px;
+		&:hover
+		{
+			color: $accent-color;
+		}
+	}
+}
+.personal-nav-item_active
+{
+	a {
+		color: $accent-color;
+	}
+}

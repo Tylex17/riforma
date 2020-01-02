@@ -1,0 +1,30 @@
+<div class="products">
+	<div class="section__title {{ modif }}">
+		{{ title }}
+	</div>
+	{% if search == 'true' %}
+		{% include "search-info.twig" with {'reset': {{reset}} %}
+		<div class="mobile-filter-wr dropdown-wr">
+			<div class="mobile-filter-btn dropdown-activator" onclick="o2.dropdown.toggle(this);">
+				<span class="mobile-filter-btn__closed-text">
+					Показать фильтр
+				</span>
+				<span class="mobile-filter-btn__opened-text">
+					Свернуть фильтр
+				</span>
+			</div>
+			<div class="mobile-filter dropdown-list">
+				{% include "./filter.twig" %}
+			</div>
+		</div>
+	{% endif %}
+	{% set productButton = false %}
+	{% if inShop == true %}
+		{% set productButton = true %}
+	{% endif %}
+	<div class="products__row">
+		{% for i in 0..cardCount-1 %}
+			{% include "product.twig" with productButton %}
+		{% endfor %}
+	</div>
+</div>

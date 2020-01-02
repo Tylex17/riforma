@@ -1,0 +1,360 @@
+.registration__title
+{
+	line-height: 32px;
+	margin-bottom: 57px;
+}
+.registration-message__title
+{
+	margin-bottom: 25px;
+	line-height: 32px;
+}
+.person-info__title_mob
+{
+	display: none;
+}
+.person-info__row
+{
+	display: flex;
+	margin-bottom: 31px;
+}
+.person-info__row-left,
+.person-info__row-right
+{
+	width: 450px;
+}
+.person-info__row-left
+{
+	margin-right: 125px;
+}
+.person-info
+{
+	._tabs-container
+	{
+		padding-left: 0;
+	}
+}
+.person-info__type
+{
+	max-width: 350px;
+	margin-bottom: 24px;
+	display: flex;
+	justify-content: space-between;
+}
+.person-info__type-item_center
+{
+	display: flex;
+	align-items: center;
+}
+.person-info__radio
+{
+	width: 15px;
+	height: 15px;
+}
+.person-info__input
+{
+}
+.person-info__input_small
+{
+	max-width: 200px;
+}
+
+.person-info-comment-wr
+{
+
+}
+.person-info-comment
+{
+	// position: absolute;
+	// left: 0;
+}
+.person-info__input_group
+{
+	display: flex;
+	justify-content: space-between;
+}
+.person-info__bottom
+{
+	display: flex;
+	justify-content: space-between;
+	max-width: 1075px;
+	margin-top: 58px;
+	margin-bottom: 146px;
+}
+.person-info__bottom-left
+{
+	.o-checkbox
+	{
+		display: flex;
+	}
+}
+.person-info__bottom-right
+{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	text-align: right;
+}
+.pesonal-info__policy
+{
+	font-size: 14px;
+	line-height: 22px;
+	& a
+	{
+		color: $accent-color;
+		text-decoration: underline;
+	}
+}
+.person-info__btn
+{
+	max-width: 271px;
+	min-width: 271px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	font-size: 18px;
+	margin-top: 20px;
+}
+.person-info__checkbox_mob
+{
+	display: none;
+}
+.registration-message
+{
+	height: 80vh;
+	display: none;
+}
+
+@media (min-width: $large)
+{
+	.o-checkbox__text,
+	.o-radio__text,
+	.pesonal-info__policy
+	{
+		font-size: 0.9rem;
+	}
+}
+
+@media (max-width: 1300px)
+{
+	.person-info__input_small
+	{
+		max-width: 180px;
+	}
+}
+
+@media (max-width: $medium)
+{
+	.person-info__row-left
+	{
+		margin-right: 70px;
+	}
+	.person-info__input_small
+	{
+		max-width: 130px;
+	}
+	.person-info__type
+	{
+		max-width: 300px;
+	}
+	.person-info__input
+	{
+		.input__label
+		{
+			font-size: 14px;
+		}
+	}
+	.person-info__type-item_center
+	{
+		.o-radio__text
+		{
+			font-size: 12px;
+		}
+	}
+	.person-info__btn
+	{
+		min-width: 250px;
+		font-size: 14px;
+	}
+	.person-info__bottom
+	{
+		.o-checkbox__text
+		{
+			font-size: 12px;
+		}
+	}
+	.pesonal-info__policy
+	{
+		font-size: 12px;
+	}
+}
+@media (max-width: $tablet)
+{
+	.person-info__type
+	{
+		max-width: 230px;
+		margin-bottom: 10px;
+	}
+	.person-info__btn
+	{
+		min-width: 200px;
+		padding-top: 12px;
+		padding-bottom: 12px;
+		font-size: 14px;
+	}
+	.person-info__input_group
+	{
+		flex-direction: column;
+	}
+	.person-info__row
+	{
+		margin-bottom: 33px;
+	}
+	.person-info__input_small
+	{
+		max-width: 100%;
+		&:not(:last-child)
+		{
+			margin-bottom: 23px;
+		}
+	}
+	.person-info-comment
+	{
+		font-size: 12px;
+		line-height: 16px;
+		padding: 8px;
+	}
+	.person-info__bottom
+	{
+		.o-checkbox__body
+		{
+			display: flex;
+		}
+	}
+	.person-info__bottom-left
+	{
+		padding-top: 3px;
+	}
+}
+@media (max-width: $mobile)
+{
+	.registration
+	{
+		.breadcrumbs
+		{
+			margin-bottom: 8px;
+		}
+	}
+	.registration__title,
+	.registration-message__title
+	{
+		font-size: 17px;
+		line-height: 26px;
+		margin-bottom: 30px;
+	}
+	.registration__title_br_hide
+	{
+		display: none;
+	}
+	.person-info__title
+	{
+		margin-bottom: 30px;
+	}
+	.person-info__title_mob
+	{
+		display: block;
+		line-height: 19px;
+		margin-bottom: 0;
+	}
+	.person-info__type
+	{
+		flex-direction: column;
+		margin-bottom: 25px;
+	}
+	.person-info__type-item
+	{
+		&:not(:last-child)
+		{
+			margin-bottom: 25px;
+		}
+	}
+	.person-info__row
+	{
+		flex-direction: column;
+		margin-bottom: 0;
+	}
+	.person-info__row-left,
+	.person-info__row-right
+	{
+		width: 100%;
+
+	}
+	.person-info__type-item_center
+	{
+		.o-radio__text
+		{
+			font-size: 14px;
+			line-height: 17px;
+		}
+	}
+	.person-info__input
+	{
+		margin-bottom: 15px;
+		.input__label
+		{
+			font-size: 14px;
+		}
+	}
+	.person-info__radio
+	{
+		width: 11px;
+		height: 11px;
+	}
+	.person-info__checkbox
+	{
+		width: 11px;
+		height: 11px;
+	}
+	.person-info__checkbox_mob
+	{
+		.o-checkbox__box
+		{
+			width: 11px;
+			height: 11px;
+		}
+		.o-checkbox__text
+		{
+			font-size: 14px;
+		}
+	}
+	.person-info__bottom-left
+	{
+		display: none;
+	}
+	.person-info__bottom
+	{
+		flex-direction: column;
+		margin-top: 0;
+		margin-bottom: 70px;
+	}
+	.pesonal-info__policy
+	{
+		font-size: 14px;
+	}
+	.person-info__checkbox_mob
+	{
+		display: block;
+		margin-bottom: 45px;
+	}
+	.person-info__btn
+	{
+		min-width: 100%;
+		margin-top: 15px;
+		padding-top: 13px;
+		padding-bottom: 12px;
+		font-size: 14px;
+		line-height: 15px;
+	}
+	.registration-message
+	{
+		height: 60vh;
+	}
+}

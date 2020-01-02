@@ -1,0 +1,9 @@
+<div class="popup-wr" data-popup-name="{{popupName}}">
+	<div class="popup-overlay" onclick="o2.popups.close();"></div>
+	<div class="popup-body">
+		{% block fixedContent %}{% endblock %}
+		<div class="popup-body-html">
+			{% block popupConent %}{% endblock %}
+		</div>
+	</div>
+</div>

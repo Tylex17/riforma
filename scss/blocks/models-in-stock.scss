@@ -1,0 +1,26 @@
+.models-in-stock
+{
+	.section__title
+	{
+		margin-bottom: 0;
+	}
+}
+.models-in-stock__items
+{
+	display: flex;
+}
+.models-in-stock-slider
+{
+	overflow: hidden;
+	&.slick-slider
+	{
+		overflow: visible;
+	}
+}
+@media (max-width: $mobile)
+{
+	.models-in-stock
+	{
+		display: none;
+	}
+}

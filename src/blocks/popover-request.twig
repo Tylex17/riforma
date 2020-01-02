@@ -1,0 +1,45 @@
+{% extends "../layouts/popover.twig" %}
+
+{% set popoverName = 'request' %}
+{% set includePopup = 'popup-request' %}
+{% block popoverContent %}
+	<div class="popover-request-wr">
+		<form action="" class="popover-request-form" onsubmit="o2.feedbackRequest.send(this, event)" novalidate="">
+			<div class="popover-request-top">
+				<div class="popover-request-header">
+					Заказать обратный звонок
+				</div>
+				<div class="popover-request-label">
+					Пожалуйста, заполните краткую информационную форму, и&nbsp;наши сотрудники свяжутся с&nbsp;вами.
+				</div>
+				<div class="popover-request-input__inputs">
+					<label class="input-wr popover-request-input">
+						<input type="text" class="input _required" value="" onkeyup="this.setAttribute('value', this.value);" onchange="this.setAttribute('value', this.value);">
+						<div class="input__label">Имя*</div>
+						<div class="input__sub-text input__sub-text_text">Введите Имя</div>
+						<div class="input__sub-text input__sub-text_error"></div>
+					</label>
+					<label class="input-wr popover-request-input">
+						<input type="tel" class="input _required _phone-mask" value="" onkeyup="this.setAttribute('value', this.value);" onchange="this.setAttribute('value', this.value);">
+						<div class="input__label">Телефон*</div>
+						<div class="input__sub-text input__sub-text_text">Введите Телефон</div>
+						<div class="input__sub-text input__sub-text_error"></div>
+					</label>
+				</div>
+			</div>
+			<button class="btn btn_accent btn_full popover-request-btn" type="submit">Заказать звонок</button>
+		</form>
+		<div class="popover-request-success">
+			<div class="popover-request-success__top">
+				<div class="popover-request-success__header">
+					Ваша заявка принята
+				</div>
+				<div class="popover-request-success__descr">
+					Наш консультант перезвонит <br />
+					Вам в&nbsp;течении 10&nbsp;минут.
+				</div>
+			</div>
+			<button class="btn btn_full popover-request-btn popover-request-btn_skin" onclick="o2.popover.close()">Продолжить покупки</button>
+		</div>
+	</div>
+{% endblock %}

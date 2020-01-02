@@ -1,0 +1,91 @@
+{% extends "../layouts/popup-body.twig" %}
+
+{% set popupName = 'menu' %}
+{% block popupConent %}
+	<div class="mobile-menu-wr">
+		<nav class="mobile-menu-nav">
+			<ul class="mobile-menu-list">
+				<li class="mobile-menu-list__item mobile-menu-list__item_sub-list-parent dropdown-wr">
+					<a href="javascript:void(0);" class="mobile-menu-list__link dropdown-activator" onclick="o2.dropdown.toggle(this);">О бренде</a>
+					<ul class="mobile-menu-sub-list dropdown-list">
+						<li class="mobile-menu-sub-list__item">
+							<a href="#" class="mobile-menu-sub-list__link">О нас</a>
+						</li>
+						<li class="mobile-menu-sub-list__item">
+							<a href="#" class="mobile-menu-sub-list__link">Вакансии</a>
+						</li>
+						<li class="mobile-menu-sub-list__item">
+							<a href="#" class="mobile-menu-sub-list__link">Сотрудничество</a>
+						</li>
+						<li class="mobile-menu-sub-list__item">
+							<a href="#" class="mobile-menu-sub-list__link">Программа лояльности</a>
+						</li>
+					</ul>
+				</li>
+				<li class="mobile-menu-list__item mobile-menu-list__item_sub-list-parent dropdown-wr">
+					<a href="javascript:void(0);" class="mobile-menu-list__link dropdown-activator" onclick="o2.dropdown.toggle(this);">Каталог</a>
+					<ul class="mobile-menu-sub-list dropdown-list">
+						<li class="mobile-menu-sub-list__item">
+							<a href="#" class="mobile-menu-sub-list__link">Прямые диваны</a>
+						</li>
+						<li class="mobile-menu-sub-list__item">
+							<a href="#" class="mobile-menu-sub-list__link">Угловые диваны</a>
+						</li>
+						<li class="mobile-menu-sub-list__item">
+							<a href="#" class="mobile-menu-sub-list__link">Кресла</a>
+						</li>
+						<li class="mobile-menu-sub-list__item">
+							<a href="#" class="mobile-menu-sub-list__link">Модульные диваны</a>
+						</li>
+						<li class="mobile-menu-sub-list__item">
+							<a href="#" class="mobile-menu-sub-list__link">Малые формы</a>
+						</li>
+						<li class="mobile-menu-sub-list__item">
+							<a href="#" class="mobile-menu-sub-list__link">Комплекты</a>
+						</li>
+						<li class="mobile-menu-sub-list__item">
+							<a href="#" class="mobile-menu-sub-list__link">Распродажа</a>
+						</li>
+					</ul>
+				</li>
+				<li class="mobile-menu-list__item">
+					<a href="#" class="mobile-menu-list__link">Доставка и оплата</a>
+				</li>
+				<li class="mobile-menu-list__item">
+					<a href="#" class="mobile-menu-list__link">Акции и события</a>
+				</li>
+				<li class="mobile-menu-list__item">
+					<a href="#" class="mobile-menu-list__link">Дисконт центр</a>
+				</li>
+				<li class="mobile-menu-list__item">
+					<div class="mobile-menu-list__link" onclick="o2.popups.open('login')">Войти</div>
+				</li>
+			</ul>
+		</nav>
+		<div class="mobile-menu-city _select-city dropdown-wr">
+			<div class="mobile-menu-city__label">Ваш регион</div>
+			<div class="mobile-menu-city__selected dropdown-activator" onclick="o2.dropdown.toggle(this);">
+				<div class="mobile-menu-city__selected-name _select-city-name">Москва</div>
+				<div class="mobile-menu-city__arrow">
+					<svg role="img" class="arrow-down">
+						<use xlink:href="#arrow-down"></use>
+					</svg>
+				</div>
+			</div>
+			<ul class="mobile-menu-city-list__items dropdown-list">
+				<li class="mobile-menu-city-list__item" onclick="o2.header.location.selectCityInPopup(this);">Калуга</li>
+				<li class="mobile-menu-city-list__item" onclick="o2.header.location.selectCityInPopup(this);">Брянск</li>
+				<li class="mobile-menu-city-list__item" onclick="o2.header.location.selectCityInPopup(this);">Серпухов</li>
+				<li class="mobile-menu-city-list__item" onclick="o2.header.location.selectCityInPopup(this);">Волгоград</li>
+				<li class="mobile-menu-city-list__item" onclick="o2.header.location.selectCityInPopup(this);">Сочи</li>
+				<li class="mobile-menu-city-list__item" onclick="o2.header.location.selectCityInPopup(this);">Краснодар</li>
+				<li class="mobile-menu-city-list__item" onclick="o2.header.location.selectCityInPopup(this);">Ярославль</li>
+				<li class="mobile-menu-city-list__item" onclick="o2.header.location.selectCityInPopup(this);">Киров</li>
+				<li class="mobile-menu-city-list__item" onclick="o2.header.location.selectCityInPopup(this);">Иваново</li>
+				<li class="mobile-menu-city-list__item" onclick="o2.header.location.selectCityInPopup(this);">Тюмень</li>
+				<li class="mobile-menu-city-list__item" onclick="o2.header.location.selectCityInPopup(this);">Пермь</li>
+				<li class="mobile-menu-city-list__item" onclick="o2.header.location.selectCityInPopup(this);">Томск</li>
+			</ul>
+		</div>
+	</div>
+{% endblock %}

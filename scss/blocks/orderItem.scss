@@ -1,0 +1,342 @@
+.order-item__bot
+{
+	margin-bottom: 5px;
+}
+
+.order-item__bot-wr
+{
+	display: flex;
+	margin-top: 8px;
+	align-items: center;
+}
+
+.order-item__info
+{
+	display: flex;
+}
+
+.order-item__params
+{
+	display: flex;
+	flex: 1;
+}
+
+.order-item__img
+{
+	margin-right: 40px;
+	width: 332px;
+	height: 248px;
+	flex-shrink: 0;
+	img
+	{
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+
+.order-item__main-info_mobile
+{
+	display: none;
+}
+
+
+.order-item__order-name
+{
+	font-size: 22px;
+	line-height: 26px;
+	font-family: $second-font;
+	margin-bottom: 24px;
+}
+
+.order-item__list
+{
+	margin-right: 20px;
+	width: 230px;
+}
+
+.order-item__list-item
+{
+	font-size: 14px;
+	line-height: 22px;
+
+	&:not(:last-child)
+	{
+		margin-bottom: 10px;
+	}
+
+	span:first-child
+	{
+		font-family: $second-font;
+		min-width: 100px;
+		display: inline-block;
+		padding-right: 5px;
+	}
+}
+
+.order-item__price
+{
+	font-size: 22px;
+	line-height: 24px;
+	min-width: 110px;
+	flex-shrink: 0;
+	text-align: center;
+	margin-right: 30px;
+}
+
+.order-item__count
+{
+	width: 80px;
+	margin-right: 60px;
+	text-align: center;
+}
+
+.order-item__discount
+{
+	width: 60px;
+	text-align: center;
+}
+
+.order-item__total-price
+{
+	// text-align: right;
+	// flex: 1;
+	// padding-right: 10px;
+	min-width: 100px;
+	font-size: 22px;
+	line-height: 24px;
+	font-family: $second-font;
+	text-align: left;
+	margin-left: auto;
+}
+@media (max-width: 1440px)
+{
+	.order-item__img
+	{
+		width: 300px;
+	}
+	.order-item__price
+	{
+		margin-right: 0;
+		// min-width: 16%;
+		// margin-right: 30px;
+	}
+	.order-item__count
+	{
+		margin-right: 40px;
+	}
+	.order-item__total-price
+	{
+		padding-right: 0;
+	}
+}
+@media (max-width: 1400px)
+{
+	.order-item__price
+	{
+		margin-right: 30px;
+	}
+	.order-item__count
+	{
+		margin-right: 20px;
+	}
+	.order-item__total-price
+	{
+		// padding-right: 20px;
+	}
+}
+@media (max-width: 1350px)
+{
+	.order-item__price
+	{
+		min-width: 90px;
+		margin-right: 10px;
+	}
+	.order-item__count
+	{
+		margin-right: 10px;
+	}
+	.order-item__total-price
+	{
+		max-width: 90px;
+	}
+}
+@media (max-width: 1300px)
+{
+
+	.order-item__info
+	{
+		width: 60%;
+		flex-shrink: 0;
+	}
+
+	.order-item__order-name
+	{
+		margin-bottom: 8px;
+	}
+
+	.order-item__img
+	{
+		width: 100%;
+		margin-bottom: 20px;
+	}
+
+	.order-item__main-info
+	{
+		display: none;
+	}
+
+	.order-item__main-info_mobile
+	{
+		display: block;
+	}
+
+	.order-item__info
+	{
+		flex-wrap: wrap;
+	}
+
+	.order-item__list
+	{
+		width: 100%;
+	}
+
+	.order-item__params
+	{
+		flex-wrap: wrap;
+		padding-top: 0;
+		align-items: flex-start;
+		flex-direction: column;
+	}
+	.order-item__count
+	{
+		order: 10;
+		align-self: flex-end;
+		margin-right: 0;
+		border: 1px solid #D1D1D1;
+		padding: 8px 5px;
+		min-width: 33px;
+		display: flex;
+		align-items: flex-end;
+		justify-content: center;
+	}
+	.order-item__price
+	{
+		display: none;
+	}
+	.order-item__discount,
+	.order-item__total-price
+	{
+		width: 100%;
+		margin-right: 0;
+		align-self: flex-start;
+		text-align: right;
+		flex: 1;
+	}
+
+	.order-item__total-price
+	{
+		flex: 1;
+	}
+
+	.order-item__discount
+	{
+		margin-bottom: 5px;
+		flex: 0;
+		min-height: 14px;
+	}
+
+	.order-item__bot-wr
+	{
+		align-items: stretch;
+	}
+}
+@media (max-width: $tablet)
+{
+	.order-item__img
+	{
+		height: 160px;
+		margin-bottom: 14px;
+	}
+}
+@media (max-width: $mobile)
+{
+	.order-item__count
+	{
+		max-width: 38px;
+		padding: 8px 5px;
+		// padding-top: 4px;
+		line-height: normal;
+		font-size: 12px;
+	}
+	.order-item__info
+	{
+		flex-basis: 50%;
+	}
+	.order-item__img
+	{
+		height: 106px;
+		width: 145px;
+	}
+
+	.order-item__btn
+	{
+		font-size: 0;
+	}
+
+	.order-item__top
+	{
+		padding: 29px 0;
+		.chevron
+		{
+			display: inline-block;
+		}
+	}
+
+	.order-item__bot-wr
+	{
+		margin-top: 0;
+	}
+
+	.order-item__order-name
+	{
+		font-size: 14px;
+		line-height: 20px;
+		margin-bottom: 0;
+	}
+
+	.order-item__list-item span:first-child
+	{
+		display: inline;
+		min-width: 0;
+	}
+
+	.order-item__list-item
+	{
+		font-size: 14px;
+		line-height: 20px;
+
+		&:not(:last-child)
+		{
+			margin-bottom: 0;
+		}
+	}
+
+	.order-item__discount,
+	.order-item__total-price
+	{
+		font-size: 14px;
+		line-height: 19px;
+	}
+
+	.order-item__discount
+	{
+		margin-bottom: 5px;
+	}
+
+	.order-item__name
+	{
+		font-size: 10px;
+		line-height: 16px;
+	}
+}

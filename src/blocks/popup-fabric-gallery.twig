@@ -1,0 +1,138 @@
+{% extends "../layouts/popup-body.twig" %}
+
+{% set popupName = 'fabric-gallery' %}
+{% set cards = [
+	{
+		'id': '1',
+		'cardTitle': 'Italia - Италия (Велюр), от 44000₽',
+		'cardDesc': 'Богатая цветовая палитра, эстетическая привлекательность,
+					приятная&nbsp;на ощупь фактура, повышенная мягкость&nbsp;&mdash;
+					коллекция Italia отвечает всем требованиям, предъявляемым к&nbsp;
+					современной обивке. Этот велюр блестяще оформит сложные формы
+					мягкой мебели, на&nbsp;которых особенно выигрышно смотрится игра
+					света и&nbsp;тени.',
+		'cardCompos': 'Состав: <span class="fabric-gallery__compos_bold">100%&nbsp;полиэстер</span><br>
+						Устойчивость к&nbsp;истиранию:
+						<span class="fabric-gallery__compos_bold">25&nbsp;000 циклов<span>',
+		'cardFabricCount': '7'
+	},
+	{
+		'id': '2',
+		'cardTitle': 'Italia - Италия (Велюр), от 44000₽',
+		'cardDesc': 'Богатая цветовая палитра, эстетическая привлекательность,
+					приятная&nbsp;на ощупь фактура, повышенная мягкость&nbsp;&mdash;
+					коллекция Italia отвечает всем требованиям, предъявляемым к&nbsp;
+					современной обивке. Этот велюр блестяще оформит сложные формы
+					мягкой мебели, на&nbsp;которых особенно выигрышно смотрится игра
+					света и&nbsp;тени.',
+		'cardCompos': 'Состав: <span class="fabric-gallery__compos_bold">100%&nbsp;полиэстер</span><br>
+						Устойчивость к&nbsp;истиранию:
+						<span class="fabric-gallery__compos_bold">25&nbsp;000 циклов<span>',
+		'cardFabricCount': '16'
+	},
+	{
+		'id': '3',
+		'cardTitle': 'Italia - Италия (Велюр), от 44000₽',
+		'cardDesc': 'Богатая цветовая палитра, эстетическая привлекательность,
+					приятная&nbsp;на ощупь фактура, повышенная мягкость&nbsp;&mdash;
+					коллекция Italia отвечает всем требованиям, предъявляемым к&nbsp;
+					современной обивке. Этот велюр блестяще оформит сложные формы
+					мягкой мебели, на&nbsp;которых особенно выигрышно смотрится игра
+					света и&nbsp;тени.',
+		'cardCompos': 'Состав: <span class="fabric-gallery__compos_bold">100%&nbsp;полиэстер</span><br>
+						Устойчивость к&nbsp;истиранию:
+						<span class="fabric-gallery__compos_bold">25&nbsp;000 циклов<span>',
+		'cardFabricCount': '5'
+	},
+	{
+		'id': '4',
+		'cardTitle': 'Italia - Италия (Велюр), от 44000₽',
+		'cardDesc': 'Богатая цветовая палитра, эстетическая привлекательность,
+					приятная&nbsp;на ощупь фактура, повышенная мягкость&nbsp;&mdash;
+					коллекция Italia отвечает всем требованиям, предъявляемым к&nbsp;
+					современной обивке. Этот велюр блестяще оформит сложные формы
+					мягкой мебели, на&nbsp;которых особенно выигрышно смотрится игра
+					света и&nbsp;тени.',
+		'cardCompos': 'Состав: <span class="fabric-gallery__compos_bold">100%&nbsp;полиэстер</span><br>
+						Устойчивость к&nbsp;истиранию:
+						<span class="fabric-gallery__compos_bold">25&nbsp;000 циклов<span>',
+		'cardFabricCount': '6'
+	},
+
+] %}
+{% block fixedContent %}
+	<ul class="fabric-gallery__list">
+		<li class="fabric-gallery__item" data-fabric-id="1" onclick="o2.productCard.popupMaterial.scrollToSelectedMaterial(this, event)">
+			<a href="#">Alur<span class="fabric-gallery__comma_show-tablet">,</span></a>
+		</li>
+		<li class="fabric-gallery__item" data-fabric-id="2" onclick="o2.productCard.popupMaterial.scrollToSelectedMaterial(this, event)">
+			<a href="#">Savoy<span class="fabric-gallery__comma_show-tablet">,</span></a>
+		</li>
+		<li class="fabric-gallery__item" data-fabric-id="3" onclick="o2.productCard.popupMaterial.scrollToSelectedMaterial(this, event)">
+			<a href="#">Talisman<span class="fabric-gallery__comma_show-tablet">,</span></a>
+		</li>
+		<li class="fabric-gallery__item" data-fabric-id="4" onclick="o2.productCard.popupMaterial.scrollToSelectedMaterial(this, event)">
+			<a href="#">Velvet Lux<span class="fabric-gallery__comma_show-tablet">,</span></a>
+		</li>
+	</ul>
+	<div class="fabric-gallery__drop-down-wr _select-item">
+		<div class="fabric-gallery__drop-down" onclick="o2.dropdown.materialToggle(this)">
+			<div class="fabric-gallery__selected _select-item-name">
+				<div class="fabric-gallery__item-name">Показать список</div>
+			</div>
+			<ul class="fabric-gallery__drop-down-list">
+				<li class="fabric-gallery__item" data-fabric-id="1" onclick="o2.productCard.popupMaterial.scrollToSelectedMaterial(this, event)">
+					<a href="#">Alur<span class="fabric-gallery__comma_show-tablet">,</span></a>
+				</li>
+				<li class="fabric-gallery__item" data-fabric-id="2" onclick="o2.productCard.popupMaterial.scrollToSelectedMaterial(this, event)">
+					<a href="#">Savoy<span class="fabric-gallery__comma_show-tablet">,</span></a>
+				</li>
+				<li class="fabric-gallery__item" data-fabric-id="3" onclick="o2.productCard.popupMaterial.scrollToSelectedMaterial(this, event)">
+					<a href="#">Talisman<span class="fabric-gallery__comma_show-tablet">,</span></a>
+				</li>
+				<li class="fabric-gallery__item" data-fabric-id="4" onclick="o2.productCard.popupMaterial.scrollToSelectedMaterial(this, event)">
+					<a href="#">Velvet Lux<span class="fabric-gallery__comma_show-tablet">,</span></a>
+				</li>
+			</ul>
+		</div>
+	</div>
+{% endblock %}
+{% block popupConent %}
+	<div class="fabric-gallery-wr">
+		<div class="fabric-gallery">
+			<div class="fabric-gallery__reset-filter">Сбросить фильтры</div>
+			<div class="fabric-gallery__body">
+				<div class="fabric-gallery__cards">
+				{% for card in cards %}
+					<div class="fabric-gallery__card" data-fabric-id="{{ card.id }}">
+						<div class="fabric-gallery__title">{{ card.cardTitle }}</div>
+						<div class="fabric-gallery__info">
+							<div class="fabric-gallery__desc fabric-gallery__desc_margin">
+								<span class="fabric-gallery__text">
+									{{ card.cardDesc }}
+								</span>
+								<span class="fabric-gallery__btn" onclick="o2.productCard.popupMaterial.popupInfoToggle(this)">
+									Информация о материале
+								</span>
+							</div>
+							<div class="fabric-gallery__compos">
+								{{ card.cardCompos }}
+							</div>
+						</div>
+						<div class="fabric-gallery__colors">
+						{% for i in 0..card.cardFabricCount %}
+							<div class="fabric-gallery__color">
+								<picture>
+									<source data-srcset="img/assets/fabric-img.jpg, img/assets/fabric-img@2x.jpg 2x">
+									<img data-src="img/assets/fabric-img.jpg" class="lazy-image" alt="">
+								</picture>
+							</div>
+						{% endfor %}
+						</div>
+					</div>
+				{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

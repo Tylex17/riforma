@@ -1,0 +1,29 @@
+{# index.twig #}
+{% extends "layouts/layout.twig" %}
+
+{% block sidebar %}
+	{% include "./blocks/sidebar.twig" with {topFixed: false} %}
+	{% include "./blocks/small-forms-filter.twig" with {topFixed: false} %}
+
+{% endblock %}
+
+{% block page %}
+	{% include "./blocks/breadcrumbs.twig" %}
+	<div class="small-forms">
+		{% include "./blocks/search-info.twig" with {'reset': {{reset}}}%}
+		<div class="mobile-filter-wr dropdown-wr">
+			<div class="mobile-filter-btn dropdown-activator" onclick="o2.dropdown.toggle(this);">
+				<span class="mobile-filter-btn__closed-text">
+					Показать фильтр
+				</span>
+				<span class="mobile-filter-btn__opened-text">
+					Свернуть фильтр
+				</span>
+			</div>
+			<div class="mobile-filter dropdown-list">
+				{% include "./blocks/small-forms-filter.twig" %}
+			</div>
+		</div>
+		{% include "blocks/products.twig"  with {'title': 'Малые формы', 'reset': 'true', 'cardCount': 6} %}
+	</div>
+{% endblock %}

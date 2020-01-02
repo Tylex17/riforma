@@ -1,0 +1,76 @@
+
+	<div class="order-item__bot">
+		<div class="order-item__bot-wr">
+			<div class="order-item__info">
+				<div class="order-item__img">
+					<picture>
+						{# <source srcset="img/assets/{{item.img}}-phone.jpg, img/assets/{{item.img}}-phone@2x.jpg 2x" media="(max-width: 740px)"> #}
+						{# <source srcset="img/assets/{{item.img}}-tablet.jpg, img/assets/{{item.img}}-tablet@2x.jpg 2x" media="(max-width: 950px)"> #}
+						<source srcset="img/assets/{{item.img}}-1000.jpg, img/assets/{{item.img}}-1000@2x.jpg 2x" media="(max-width: 1200px)">
+						<source srcset="img/assets/{{item.img}}.jpg, img/assets/{{item.img}}@2x.jpg 2x">
+						<img src="img/assets/{{item.img}}.jpg" alt="">
+					</picture>
+				</div>
+				<div class="order-item__main-info order-item__main-info_mobile">
+					<div class="order-item__order-name">
+						{{item.name}}
+					</div>
+					<ul class="order-item__list">
+						<li class="order-item__list-item">
+							<span>Модель</span>
+							<span>{{item.model}}</span>
+						</li>
+						<li class="order-item__list-item">
+							<span>Габариты</span>
+							<span>{{item.size}}</span>
+						</li>
+						<li class="order-item__list-item">
+							<span>Цвет</span>
+							<span>{{item.color}}</span>
+						</li>
+						<li class="order-item__list-item">
+							<span>Угол</span>
+							<span>{{item.corner}}</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="order-item__params">
+				<div class="order-item__main-info">
+					<div class="order-item__order-name">
+						{{item.name}}
+					</div>
+					<ul class="order-item__list">
+						<li class="order-item__list-item">
+							<span>Модель</span>
+							<span>{{item.model}}</span>
+						</li>
+						<li class="order-item__list-item">
+							<span>Габариты</span>
+							<span>{{item.size}}</span>
+						</li>
+						<li class="order-item__list-item">
+							<span>Цвет</span>
+							<span>{{item.color}}</span>
+						</li>
+						<li class="order-item__list-item">
+							<span>Угол</span>
+							<span>{{item.corner}}</span>
+						</li>
+					</ul>
+				</div>
+				<div class="order-item__price">
+					{{item.price}}₽
+				</div>
+				<div class="order-item__count">
+					{{item.count}}
+				</div>
+				<div class="order-item__discount">
+					{{item.discount}}%
+				</div>
+				<div class="order-item__total-price">
+					999 000₽
+				</div>
+			</div>
+		</div>
+	</div>

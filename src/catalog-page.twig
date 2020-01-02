@@ -1,0 +1,34 @@
+{# index.twig #}
+{% extends "layouts/layout.twig" %}
+
+{% block sidebar %}
+	{% include "./blocks/sidebar.twig" with {topFixed: false, catalogDetail: true} %}
+	{% include "./blocks/filter.twig" %}
+{% endblock %}
+
+{% block page %}
+	<div class="catalog-page">
+		{% include "blocks/breadcrumbs.twig" %}
+
+		<h2 class="section__title catalog-page__title">Прямые диваны</h2>
+		{% include "blocks/large-slider.twig" with {"parallax": "true", "content": ["large-slider", "large-slider", "large-slider", "large-slider",], "classes": "top-large-slider"} %}
+		{% include "blocks/search-info.twig" %}
+		<div class="mobile-filter-wr dropdown-wr">
+			<div class="mobile-filter-btn dropdown-activator" onclick="o2.dropdown.toggle(this);">
+				<span class="mobile-filter-btn__closed-text">
+					Показать фильтр
+				</span>
+				<span class="mobile-filter-btn__opened-text">
+					Свернуть фильтр
+				</span>
+			</div>
+			<div class="mobile-filter dropdown-list">
+				{% include "blocks/filter.twig" %}
+			</div>
+		</div>
+		{% include "blocks/collections.twig" with {"title":"Коллекция Весна/Лето 2018", "cardCount":5} %}
+	</div>
+
+	{% include "./blocks/popup-actions.twig" %}
+	{% include "./blocks/popup-second-actions.twig" %}
+{% endblock %}

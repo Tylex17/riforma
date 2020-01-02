@@ -1,0 +1,58 @@
+{# index.twig #}
+{% extends "layouts/layout.twig" %}
+
+{% block sidebar %}
+	{% include "./blocks/sidebar.twig" with {topFixed: false, catalogDetail: true} %}
+	{% include "./blocks/filter.twig" %}
+{% endblock %}
+
+{% block page %}
+	<div class="collection-catalog">
+		{% include "blocks/breadcrumbs.twig" %}
+		<div class="section__title">Vincent</div>
+		<div class="collection-catalog__picture">
+			<picture>
+				<source data-srcset="img/assets/collection-catalog-mobile.jpg, img/assets/collection-catalog-mobile@2x.jpg 2x" media="(max-width: 740px)">
+				<source data-srcset="img/assets/collection-catalog-tablet.jpg, img/assets/collection-catalog-tablet@2x.jpg 2x" media="(max-width: 950px)">
+				<source data-srcset="img/assets/collection-catalog-medium.jpg, img/assets/collection-catalog-medium@2x.jpg 2x" media="(max-width: 1200px)">
+				<source data-srcset="img/assets/collection-catalog.jpg, img/assets/collection-catalog@2x.jpg 2x">
+				<img data-src="img/assets/collection-catalog.jpg" class="lazy-image" alt="">
+			</picture>
+		</div>
+		{% include "blocks/search-info.twig" %}
+		<div class="mobile-filter-wr dropdown-wr">
+			<div class="mobile-filter-btn dropdown-activator" onclick="o2.dropdown.toggle(this);">
+				<span class="mobile-filter-btn__closed-text">
+					Показать фильтр
+				</span>
+				<span class="mobile-filter-btn__opened-text">
+					Свернуть фильтр
+				</span>
+			</div>
+			<div class="mobile-filter dropdown-list">
+				{% include "blocks/filter.twig" %}
+			</div>
+		</div>
+		<div class="collection-catalog__cards">
+			{% include "blocks/collections-item-card.twig" %}
+			{% include "blocks/collections-item-card.twig" %}
+			{% include "blocks/collections-item-card.twig" %}
+			{% include "blocks/collections-item-card.twig" %}
+			{% include "blocks/collections-item-card.twig" %}
+			{% include "blocks/collections-item-card.twig" %}
+			{% include "blocks/collections-item-card.twig" %}
+			{% include "blocks/collections-item-card.twig" %}
+			{% include "blocks/collections-item-card.twig" %}
+			{% include "blocks/collections-item-card.twig" %}
+			{% include "blocks/collections-item-card.twig" %}
+			{% include "blocks/collections-item-card.twig" %}
+			{% include "blocks/collections-item-card.twig" %}
+			{% include "blocks/collections-item-card.twig" %}
+			{% include "blocks/collections-item-card.twig" %}
+			{% include "blocks/collections-item-card.twig" %}
+			{% include "blocks/collections-item-card.twig" %}
+			{% include "blocks/collections-item-card.twig" %}
+			{% include "blocks/collections-item-card.twig" %}
+		</div>
+	</div>
+{% endblock %}

@@ -1,0 +1,42 @@
+<div class="popup-product">
+	<div class="popup-product-body">
+		<div class="product-card__close" onclick="o2.productCardPopup.close()">
+			<svg role="img" class="close-info">
+				<use xlink:href="#close-info"></use>
+			</svg>
+		</div>
+		<div class="popup-product__sliders">
+			<div class="popup-product-slider">
+				{% for i in 0..5 %}
+					<div class="popup-product-slider__slide-wr">
+						<div class="popup-product-slider__slide">
+							<div class="popup-product__image">
+								<picture>
+									<source srcset="img/assets/popup-product.jpg, img/assets/popup-product@2x.jpg 2x">
+									<img src="img/assets/popup-product.jpg" class="" alt="">
+								</picture>
+							</div>
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+			<div class="popup-product-slider-nav">
+				{% for i in 0..5 %}
+					<div class="popup-product-slider-nav__slide-wr">
+						<div class="popup-product-slider-nav__slide">
+							<div class="popup-product-slider-nav__image">
+								<picture>
+									<source srcset="img/assets/product-card-img-mobile.jpg, img/assets/product-card-img-mobile@2x.jpg 2x" media="(max-width: 740px)">
+									<source srcset="img/assets/product-card-img-tablet.jpg, img/assets/product-card-img-tablet@2x.jpg 2x" media="(max-width: 950px)">
+									<source srcset="img/assets/product-card-img-medium.jpg, img/assets/product-card-img-medium@2x.jpg 2x" media="(max-width: 1200px)">
+									<source srcset="img/assets/product-card-img.jpg, img/assets/product-card-img@2x.jpg 2x">
+									<img src="img/assets/product-card-img.jpg" alt="">
+								</picture>
+							</div>
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</div>

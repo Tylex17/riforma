@@ -1,0 +1,132 @@
+.popover-request-wr
+{
+	padding-left: 50px;
+	padding-right: 50px;
+	width: 450px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	min-height: 414px;
+}
+.popover-request-wr_sended
+{
+	display: flex;
+	flex-direction: column;
+}
+.popover-request-header
+{
+	font-size: 22px;
+	line-height: 22px;
+	font-family: $second-font;
+	padding-bottom: 26px;
+}
+.popover-request-label
+{
+	font-size: 14px;
+	line-height: 24px;
+	max-width: 325px;
+}
+.popover-request-input
+{
+	margin-top: 20px;
+	&:first-child
+	{
+		margin-top: 0;
+	}
+}
+.popover-request-save
+{
+	margin-top: 27px;
+}
+.popover-request-btn
+{
+	height: 39px;
+	margin-top: 40px;
+}
+
+.popover-request-success__header
+{
+	font-size: 22px;
+	line-height: 22px;
+	padding-bottom: 26px;
+}
+.popover-request-success__descr
+{
+	line-height: 24px;
+}
+.popover-request-btn_skin
+{
+	border-color: $accent-color;
+}
+.popover-request-success
+{
+	display: none;
+	flex-direction: column;
+	flex: 1;
+	justify-content: space-between;
+}
+
+@media (max-width: $medium)
+{
+	.popover-request-wr
+	{
+		padding-left: 35px;
+		padding-right: 35px;
+		padding-top: 20px;
+		width: 340px;
+		min-height: 375px;
+	}
+	.popover-request-header
+	{
+		font-size: 18px;
+		line-height: 18px;
+		padding-bottom: 18px;
+	}
+}
+
+@media (max-width: $mobile)
+{
+	.popover-request-wr
+	{
+		width: 295px;
+		padding-left: 21px;
+		padding-right: 21px;
+		padding-top: 50px;
+		min-height: inherit;
+	}
+	.popover-request-header
+	{
+		font-size: 17px;
+		line-height: 22px;
+		color: $accent-color;
+		font-family: $second-font;
+		padding-bottom: 12px;
+	}
+	.popover-request-label
+	{
+		font-size: 14px;
+		line-height: 22px;
+		max-width: 240px;
+		padding-bottom: 0;
+	}
+	.popover-request-btn
+	{
+		margin-top: 26px;
+		height: 35px;
+		font-size: 14px;
+		font-family: $accent-font;
+	}
+
+	.popover-request-success__header
+	{
+		font-size: 14px;
+		color: $accent-color;
+		font-family: $second-font;
+		line-height: 14px;
+		padding-bottom: 15px;
+	}
+	.popover-request-success__descr
+	{
+		font-size: 12px;
+		line-height: 14px;
+	}
+}

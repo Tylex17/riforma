@@ -1,0 +1,33 @@
+{% extends "layouts/layout.twig" %}
+
+{% block sidebar %}
+	{% include "./blocks/sidebar.twig" with {topFixed: false} %}
+	{% include "./blocks/filter.twig" %}
+{% endblock %}
+{% block page %}
+
+	<div class="complects">
+        {% include "blocks/breadcrumbs.twig" %}
+        <h2 class="section__title">Комплекты</h2>
+        {% include "blocks/large-slider.twig" with {"parallax": "true", "content": ["large-slider", "large-slider", "large-slider", "large-slider"], "classes": "top-large-slider top-large-slider_margin"} %}
+        <div class="sets">
+            {% include "blocks/search-info.twig" %}
+            <div class="mobile-filter-wr dropdown-wr">
+                <div class="mobile-filter-btn dropdown-activator" onclick="o2.dropdown.toggle(this);">
+                    <span class="mobile-filter-btn__closed-text">
+                        Показать фильтр
+                    </span>
+                    <span class="mobile-filter-btn__opened-text">
+                        Свернуть фильтр
+                    </span>
+                </div>
+                <div class="mobile-filter dropdown-list">
+                    {% include "blocks/filter.twig" %}
+                </div>
+            </div>
+            {% include "blocks/sets.twig"  with {'name':'Комплект Vincent', 'cardsCount':2 } %}
+            {% include "blocks/sets.twig"  with {'name':'Комплект Sen-trope', 'cardsCount':1 } %}
+            {% include "blocks/sets.twig"  with {'name':'Комплект Sen-trope', 'cardsCount':4 } %}
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,139 @@
+.collections
+{
+	margin-bottom: 80px;
+}
+.collection-catalog
+{
+	overflow: hidden;
+	.search-info
+	{
+		display: none;
+	}
+}
+.collection-catalog__picture
+{
+	line-height: 0;
+	width: 100%;
+	height: 0;
+	overflow-y: hidden;
+	padding-bottom: 36.53%;
+	position: relative;
+	img
+	{
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		position: absolute;
+	}
+}
+.collection-catalog__cards
+{
+	display: flex;
+	flex-wrap: wrap;
+	padding-bottom: 95px;
+	margin-top: 42px;
+	margin-left: -19px;
+	margin-right: -19px;
+	.collections-item-card
+	{
+		flex-basis: calc(25% - 38px);
+		margin-left: 19px;
+		margin-right: 19px;
+	}
+}
+
+@media (max-width: $medium)
+{
+	.collection-catalog__picture
+	{
+		padding-bottom: 37.53%;
+	}
+	.collection-catalog
+	{
+		.breadcrumbs
+		{
+			margin-bottom: 14px;
+		}
+		.section__title
+		{
+			margin-bottom: 25px;
+		}
+	}
+	.collection-catalog__cards
+	{
+		margin-left: -11px;
+		margin-right: -11px;
+		.collections-item-card
+		{
+			flex-basis: calc(25% - 22px);
+			margin-left: 11px;
+			margin-right: 11px;
+		}
+	}
+}
+@media (max-width: $tablet)
+{
+	.collection-catalog__picture {
+		padding-bottom: 51.95%;
+	}
+	.collection-catalog
+	{
+		.breadcrumbs
+		{
+			margin-bottom: 17px;
+		}
+		.section__title
+		{
+			margin-bottom: 17px;
+		}
+	}
+	.collection-catalog__cards
+	{
+		margin-top: 26px;
+		margin-left: -6px;
+		margin-right: -7px;
+		.collections-item-card
+		{
+			flex-basis: calc(33.33% - 14px);
+			margin-left: 6px;
+			margin-right: 7px;
+		}
+	}
+}
+@media (max-width: $mobile)
+{
+	.collection-catalog__picture {
+		padding-bottom: 63.2%;
+	}
+	.collection-catalog
+	{
+		.breadcrumbs
+		{
+			margin-bottom: 8px;
+		}
+		.section__title
+		{
+			margin-bottom: 11px;
+		}
+		.search-info
+		{
+			display: block;
+			margin-bottom: 0;
+			margin-top: 17px;
+		}
+	}
+	.collection-catalog__cards
+	{
+		padding-bottom: 0;
+		margin-top: 17px;
+		margin-top: 0;
+		margin-left: -7px;
+		margin-right: -7px;
+		.collections-item-card
+		{
+			min-width: calc(50% - 14px);
+			margin-left: 7px;
+			margin-right: 7px;
+		}
+	}
+}

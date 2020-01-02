@@ -1,0 +1,56 @@
+.sofa-types-row
+{
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -17px;
+	margin-right: -17px;
+}
+.sofa-types
+{
+	min-width: 100%;
+	overflow: hidden;
+	padding-top: 33px;
+}
+.sofa-types_showed,
+.sofa-types.animated
+{
+	.sofa-type-wr
+	{
+		opacity: 1;
+	}
+}
+
+@media (max-width: $medium)
+{
+	.sofa-types
+	{
+		padding-top: 15px;
+	}
+	.sofa-types-row
+	{
+		margin-left: -10px;
+		margin-right: -10px;
+	}
+}
+@media (max-width: $tablet)
+{
+	.sofa-types-row
+	{
+		margin-left: -14px;
+		margin-right: -14px;
+	}
+}
+@media (max-width: $mobile)
+{
+	.sofa-types-row
+	{
+		margin-left: 0;
+		margin-right: 0;
+		flex-wrap: nowrap;
+	}
+	.sofa-types
+	{
+		overflow: visible;
+		padding-top: 0;
+	}
+}

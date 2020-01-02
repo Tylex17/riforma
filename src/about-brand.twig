@@ -1,0 +1,126 @@
+{# index.twig #}
+{% extends "layouts/layout.twig" %}
+
+{% block page %}
+	<div class="about-brand">
+		<h2 class="section__title">
+			О бренде
+		</h2>
+		<section class="about-brand__media">
+			<picture>
+				<source data-srcset="img/assets/about-brand-mobile.jpg, img/assets/about-brand-mobile@2x.jpg 2x" media="(max-width: 740px)">
+				<source data-srcset="img/assets/about-brand.jpg, img/assets/about-brand@2x.jpg 2x">
+				<img class="lazy-image" data-src="img/assets/about-brand.jpg">
+			</picture>
+		</section>
+		<section class="why-riforma-wr">
+			<h2 class="why-riforma__text">
+				Riforma&nbsp;&mdash; это мебель для активных людей, открытых новому
+				и&nbsp;лучшему. Для людей, по-настоящему ценящих жизнь, уют и&nbsp;комфорт
+				в&nbsp;ней. Riforma&nbsp;&mdash; для людей молодых душой и&nbsp;телом, которые ищут вдохновение даже в&nbsp;мелочах повседневной жизни. Для ценителей
+				стиля и&nbsp;умеренной роскоши. Мы&nbsp;создаем мебель для вас.
+			</h2>
+		</section>
+
+		<section class="about-brand__advantages">
+			<div class="about-brand-advantage">
+				<div class="about-brand-advantage__img">
+					<picture>
+						<source data-srcset="img/assets/popup-second-desc-pic-phone.jpg, img/assets/popup-second-desc-pic-phone@2x.jpg 2x" media="(max-width: 740px)">
+						<source data-srcset="img/assets/popup-second-desc-pic.jpg, img/assets/popup-second-desc-pic@2x.jpg 2x">
+						<img class="lazy-image" data-src="img/assets/popup-second-desc-pic.jpg">
+					</picture>
+				</div>
+
+				<div class="about-brand-advantage__descr">
+					Riforma&nbsp;&mdash; уникальные диваны для счастья! <br>
+					Диваны бренда Riforma&nbsp;&mdash; это результат уникального производственного цикла: от&nbsp;механизмов, комплектующих и&nbsp;тканей до&nbsp;готового дивана. Ищите ярко-фиолетовые салоны в&nbsp;мебельных центрах Москвы и&nbsp;области.
+				</div>
+			</div>
+
+			<div class="about-brand-advantage about-brand-advantage--reverse">
+				<div class="about-brand-advantage__img">
+					<picture>
+						<source data-srcset="img/assetspopup-second-desc-pic-phone.jpg, img/assets/popup-second-desc-pic-phone@2x.jpg 2x" media="(max-width: 740px)">
+						<source data-srcset="img/assets/popup-second-desc-pic.jpg, img/assets/popup-second-desc-pic@2x.jpg 2x">
+						<img class="lazy-image" data-src="img/assets/popup-second-desc-pic.jpg">
+					</picture>
+				</div>
+
+				<div class="about-brand-advantage__descr">
+					Дизайн для каждой нашей модели разрабатывается с&nbsp;учетом самых последних тенденций мирового мебельного рынка. Наши специалисты всегда в&nbsp;курсе мировых мебельных выставок Италии и&nbsp;Германии и&nbsp;поэтому могут предложить вам самые актуальные дизайнерские решения. Технологии производства диванов для нашего бренда доведены до&nbsp;совершенства и&nbsp;приближаются к&nbsp;технологиям конвейерного производства автомобилей, что дает высокую степень скорости, точности и&nbsp;качества производства и&nbsp;сборки диванов.
+				</div>
+			</div>
+
+			<div class="about-brand-advantage">
+				<div class="about-brand-advantage__img">
+					<picture>
+						<source data-srcset="img/assetspopup-second-desc-pic-phone.jpg, img/assets/popup-second-desc-pic-phone@2x.jpg 2x" media="(max-width: 740px)">
+						<source data-srcset="img/assets/popup-second-desc-pic.jpg, img/assets/popup-second-desc-pic@2x.jpg 2x">
+						<img class="lazy-image" data-src="img/assets/popup-second-desc-pic.jpg">
+					</picture>
+				</div>
+
+				<div class="about-brand-advantage__descr">
+					Riforma&nbsp;&mdash; уникальные диваны для счастья! <br>
+					Диваны бренда Riforma&nbsp;&mdash; это результат уникального производственного цикла: от&nbsp;механизмов, комплектующих и&nbsp;тканей до&nbsp;готового дивана. Ищите ярко-фиолетовые салоны в&nbsp;мебельных центрах Москвы и&nbsp;области.
+				</div>
+			</div>
+		</section>
+
+		{% include "blocks/riforma-advantages.twig" %}
+
+		<section class="about-brand__reviews">
+			<h2 class="section__title">
+				Отзывы покупателей
+			</h2>
+
+			<div class="about-brand__reviews-slider">
+				{% for i in 0..2 %}
+					<div class="about-brand-review">
+						<div class="about-brand-review__rate">
+							{% for i in 0..4 %}
+								<svg role="img" class="about-brand-review__rate-item">
+									<use xlink:href="#star"></use>
+								</svg>
+							{% endfor %}
+						</div>
+
+						<div class="about-brand-review__img">
+							<picture>
+								<source data-srcset="/img/assets/sale-item.jpg, /img/assets/sale-item@2x.jpg 2x">
+								<source data-srcset="/img/assets/sale-item-phone.jpg, /img/assets/sale-item-phone@2x.jpg 2x" media="(max-width: 740px)">
+								<source data-srcset="/img/assets/sale-item-tablet.jpg, /img/assets/sale-item-tablet@2x.jpg 2x" media="(max-width: 1024px)">
+								<source data-srcset="/img/assets/sale-item-medium.jpg, /img/assets/sale-item-medium@2x.jpg 2x" media="(max-width: 1440px)">
+								<img class="lazy-image" data-src="/img/assets/sale-item.jpg" alt="sofa">
+							</picture>
+						</div>
+
+						<div class="about-brand-review__bottom">
+							<div class="about-brand-review__person">Анна</div>
+							<div class="about-brand-review__date">17.11.2018</div>
+							<div class="about-brand-review__text">
+								Всё в срок и очень профессионально. Оформили доставку на 25 июля, в этот же день нам собрали диван, быстро, аккуратно.
+								Всё в срок и очень профессионально. Оформили доставку на 25 июля, в этот же день нам собрали диван, быстро, аккуратно.
+								Всё в срок и очень профессионально. Оформили доставку на 25 июля, в этот же день нам собрали диван, быстро, аккуратно.
+								Всё в срок и очень профессионально. Оформили доставку на 25 июля, в этот же день нам собрали диван, быстро, аккуратно.
+								Всё в срок и очень профессионально. Оформили доставку на 25 июля, в этот же день нам собрали диван, быстро, аккуратно.
+							</div>
+
+							<a href="#" class="about-brand-review__show-full" onclick="o2.aboutBrand.commentView(event)">Читать целиком</a>
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+		</section>
+
+		<section class="why-riforma-wr">
+			<h2 class="why-riforma__text why-riforma__text--bottom">
+				Riforma&nbsp;&mdash; уникальные диваны для счастья!<br>
+				Диваны бренда Riforma&nbsp;&mdash; это результат уникального производственного цикла: от&nbsp;механизмов, комплектующих
+				и&nbsp;тканей до&nbsp;готового дивана. Ищите ярко-фиолетовые салоны
+				в&nbsp;мебельных центрах Москвы и&nbsp;области.
+			</h2>
+		</section>
+	</div>
+{% endblock %}

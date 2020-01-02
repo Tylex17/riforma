@@ -1,0 +1,152 @@
+{# layout.twig #}
+<!DOCTYPE html>
+<html>
+<head>
+	<!--[if IE 6]>		<html id="section-reco_main" class="nojs ie6 ieb7 ieb8 ieb9 ieb10 split1 nosplit5 platform-PC platform-notouch"><![endif]-->
+	<!--[if IE 7]>		<html id="section-reco_main" class="nojs iea6 ie7 ieb8 ieb9 ieb10 split1 nosplit5 platform-PC platform-notouch"><![endif]-->
+	<!--[if IE 8]>		<html id="section-reco_main" class="nojs iea6 iea7 ie8 ieb9 ieb10 split1 nosplit5 platform-PC platform-notouch"><![endif]-->
+	<!--[if IE 9]>		<html id="section-reco_main" class="nojs iea6 iea7 iea8 ie9 ieb10 split1 nosplit5 platform-PC platform-notouch"><![endif]-->
+	<meta name="viewport" content="width=device-width">
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="HandheldFriendly" content="true"/>
+	<meta charset="utf-8">
+	<meta name="viewport min-width=320px" content="min-width=320, initial-scale=1.0" />
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<!--[if lt IE 9]>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js"></script>
+	<![endif]-->
+	<title>index</title>
+</head>
+<body>
+	{% include "../../img/svg-symbols.svg" %}
+	<div class="container-wr main-container">
+		<div class="main-container__left">
+			{% block sidebar %}
+				{% include "../blocks/sidebar.twig" with {topFixed: true}%}
+			{% endblock %}
+		</div>
+		<div class="content-wrapper main-container__right">
+			{% include "../blocks/header.twig" %}
+			{% block page %}{% endblock %}
+			{% include "../blocks/footer.twig" %}
+		</div>
+		{% include "../blocks/popover-login.twig" %}
+		{% include "../blocks/popover-request.twig" %}
+	</div>
+	{% include "../blocks/popup-mobile-menu.twig" %}
+	<!-- удалить этот скрипт -->
+	<script>
+		window.placemarkImgURL = 'img/assets/marker.svg'
+		window.shopsCoordinate = {
+			'москва': [
+				{
+					id:1,
+					date: '4 октября',
+					name: 'SC GAGARINSKIY',
+					coords: [55.707086, 37.591793],
+					address: "м. Автозаводская, ул. Ленинская  Слобода, д. 26, ТЦ Румер",
+					phone: "+7 (499) 406-01-98",
+					worktime: "10.00 – 22.00"
+
+				},
+				{
+					id: 2,
+					date: '14 октября',
+					name: 'AfIMALL CITY',
+					coords: [55.748963, 37.539070],
+					address: "м. Автозаводская, ул. Ленинская  Слобода, д. 26, ТЦ Румер",
+					phone: "+7 (499) 406-01-98",
+					worktime: "10.00 – 22.00"
+				},
+				{
+					id: 3,
+					date: '24 октября',
+					name: 'Avia Park',
+					coords: [55.790488, 37.531356],
+					address: "м. Автозаводская, ул. Ленинская  Слобода, д. 26, ТЦ Румер",
+					phone: "+7 (499) 406-01-98",
+					worktime: "10.00 – 22.00"
+				}
+			],
+			'калуга': [
+				{
+					id: 1,
+					date: '1 сентября',
+					name: 'SC GAGARINSKIY',
+					coords: [43.048978, 44.682405],
+					address: "м. Автозаводская, ул. Ленинская  Слобода, д. 26, ТЦ Румер",
+					phone: "+7 (499) 406-01-98",
+					worktime: "10.00 – 22.00"
+				},
+				{
+					id: 2,
+					date: '1 августа',
+					name: 'AfIMALL CITY',
+					coords: [43.051661, 44.668657],
+					address: "м. Автозаводская, ул. Ленинская  Слобода, д. 26, ТЦ Румер",
+					phone: "+7 (499) 406-01-98",
+					worktime: "10.00 – 22.00"
+				},
+				{
+					id: 3,
+					date: '24 января',
+					name: 'Avia Park',
+					coords: [43.064834, 44.652149],
+					address: "м. Автозаводская, ул. Ленинская  Слобода, д. 26, ТЦ Румер",
+					phone: "+7 (499) 406-01-98",
+					worktime: "10.00 – 22.00"
+				},
+				{
+					id: 4,
+					date: '24 января',
+					name: 'Avia Park',
+					coords: [43.094834, 44.632149],
+					address: "м. Автозаводская, ул. Ленинская  Слобода, д. 26, ТЦ Румер",
+					phone: "+7 (499) 406-01-98",
+					worktime: "10.00 – 22.00"
+				},
+				{
+					id: 5,
+					date: '24 января',
+					name: 'Avia Park',
+					coords: [43.065834, 44.612149],
+					address: "м. Автозаводская, ул. Ленинская  Слобода, д. 26, ТЦ Румер",
+					phone: "+7 (499) 406-01-98",
+					worktime: "10.00 – 22.00"
+				},
+			],
+			'брянск': [
+				{
+					id: 1,
+					date: '1 сентября',
+					name: 'SC GAGARINSKIY',
+					coords: [43.148978, 44.682405],
+					address: "м. Автозаводская, ул. Ленинская  Слобода, д. 26, ТЦ Румер",
+					phone: "+7 (499) 406-01-98",
+					worktime: "10.00 – 22.00"
+				},
+				{
+					id: 2,
+					date: '1 августа',
+					name: 'AfIMALL CITY',
+					coords: [43.151661, 44.668657],
+					address: "м. Автозаводская, ул. Ленинская  Слобода, д. 26, ТЦ Румер",
+					phone: "+7 (499) 406-01-98",
+					worktime: "10.00 – 22.00"
+				},
+				{
+					id: 3,
+					date: '24 января',
+					name: 'Avia Park',
+					coords: [43.164834, 44.652149],
+					address: "м. Автозаводская, ул. Ленинская  Слобода, д. 26, ТЦ Румер",
+					phone: "+7 (499) 406-01-98",
+					worktime: "10.00 – 22.00"
+				}
+			],
+		}
+		
+	</script>
+	<script type="text/javascript" defer src="js/main.min.js"></script>
+</body>
+</html>

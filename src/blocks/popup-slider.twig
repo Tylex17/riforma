@@ -1,0 +1,28 @@
+<div class="popup-slider-wr {{ classes }} _slider-wr ">
+	<div class="popup-slider">
+		{% for img in images %}
+			<div class="popup-slide-wr">
+				<div class="popup-slide">
+					<picture>
+						<source srcset="img/assets/{{ img }}.jpg, img/assets/{{ img }}@2x.jpg 2x">
+						<img src="img/assets/{{ img }}.jpg" alt="">
+					</picture>
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+	{% if arrows == 'true' %}
+		<div class="slider-nav">
+			<div class="slider-nav__arrow slider-nav__arrow_left _slider-prev">
+				<svg role="img" class="slider-arrow">
+					<use xlink:href="#slider-arrow"></use>
+				</svg>
+			</div>
+			<div class="slider-nav__arrow slider-nav__arrow_right _slider-next">
+				<svg role="img" class="slider-arrow">
+					<use xlink:href="#slider-arrow"></use>
+				</svg>
+			</div>
+		</div>
+	{% endif %}
+</div>

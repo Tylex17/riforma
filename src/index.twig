@@ -1,0 +1,90 @@
+{# index.twig #}
+{% extends "layouts/layout.twig" %}
+
+{% block page %}
+	{% include "blocks/large-slider.twig" with {"parallax": "true", "content": ["large-slider", "large-slider", "large-slider", "large-slider", "large-slider", "large-slider"], "classes": "top-large-slider top-large-slider_mb"} %}
+	{% include "blocks/sofa-types.twig" %}
+
+	<section class="why-riforma-wr" onclick="o2.popups.open('fabric-gallery')">
+		<h2 class="why-riforma__text">
+			Riforma&nbsp;&mdash; это мебель для активных <br class="tablet-break">людей, открытых новому&nbsp;и&nbsp;лучшему. Для&nbsp;людей, <span style="white-space: nowrap;">по-настоящему</span> ценящих жизнь, уют и&nbsp;комфорт в&nbsp;ней.
+		</h2>
+	</section>
+
+	<div class="main-products-wr">
+		{% include "blocks/products.twig"  with {'title': 'Рекомендуем сегодня', "cardCount":6, "inShop": false} %}
+		<div class="main-products-more">
+			<a href="products" class="btn main-products-more__btn">Все предложения</a>
+		</div>
+	</div>
+
+	{% include 'blocks/actions.twig' with {'rowsCount': 2, 'title':'Акции и супер предложения'} %}
+
+	<section class="riforma-furniture">
+		<h2 class="section__title">
+			Мебель Riforma — для тебя!
+		</h2>
+
+		{% include "blocks/large-slider.twig" with {"parallax": "false", "content": ['index-large', 'index-large', 'index-large', 'index-large', 'index-large'], "classes": "riforma-furniture-slider"} %}
+		<div class="riforma-furniture-descr">
+			<div class="riforma-furniture-descr__text">
+				Riforma&nbsp;&mdash; это мебель для активных людей, открытых новому&nbsp;и&nbsp;лучшему.
+				Для&nbsp;людей, <span style="white-space: nowrap;">по-настоящему</span> ценящих жизнь, уют&nbsp;и&nbsp;комфорт в&nbsp;ней.
+				Riforma&nbsp;&mdash; для&nbsp;людей молодых душой и&nbsp;телом, которые ищут вдохновение даже в&nbsp;мелочах повседневной жизни.
+				<span class="riforma-furniture-descr__text-str">
+					Для ценителей стиля и&nbsp;умеренной роскоши.
+					<br>
+					Мы&nbsp;создаем мебель для вас.
+				</span>
+			</div>
+		</div>
+		{% include "blocks/riforma-advantages.twig" %}
+	</section>
+
+	{% include "blocks/sale.twig" %}
+
+	<div class="index-map">
+		{% include "blocks/map.twig" with {'state': 'index'} %}
+	</div>
+	<script>
+		window.coords = {
+			moscow: [
+				{
+					date: '4 октября',
+					name: 'SC GAGARINSKIY',
+					coords: [55.707086, 37.591793],
+				},
+				{
+					date: '14 октября',
+					name: 'AfIMALL CITY',
+					coords: [55.748963, 37.539070],
+				},
+				{
+					date: '24 октября',
+					name: 'Avia Park',
+					coords: [55.790488, 37.531356],
+				}
+			],
+			rostov: [
+				{
+					date: '4 октября',
+					name: 'SC GAGARINSKIY',
+					coords: [55.707086, 37.591793],
+				},
+				{
+					date: '14 октября',
+					name: 'AfIMALL CITY',
+					coords: [55.748963, 37.539070],
+				},
+				{
+					date: '24 октября',
+					name: 'Avia Park',
+					coords: [55.790488, 37.531356],
+				}
+			]
+		};
+	</script>
+	{% include "./blocks/popup-shops.twig" %}
+	{% include "./blocks/popup-actions.twig" %}
+	{% include "./blocks/popup-second-actions.twig" %}
+{% endblock %}

@@ -1,0 +1,102 @@
+{% block header %}
+	<header class="header">
+		<div class="header__left">
+			<a href="/" class="header-mob-logo-wr header-anim">
+				<svg role="img" class="logo-small header-mob-logo">
+					<use xlink:href="#logo-small"></use>
+				</svg>
+			</a>
+			<nav class="header-nav">
+				<ul class="header-nav-list">
+					<li class="header-nav-list__item header-nav-list__item-sub-parent header-anim">
+						<a href="#" class="header-nav-list__link">О бренде</a>
+					</li>
+					<li class="header-nav-list-sub">
+						<ul class="header-nav-list-sub-wr">
+							<li class="header-nav-list-sub__item">
+								<a href="#" class="header-nav-list-sub__link">О нас</a>
+							</li>
+							<li class="header-nav-list-sub__item">
+								<a href="#" class="header-nav-list-sub__link">Вакансии</a>
+							</li>
+							<li class="header-nav-list-sub__item">
+								<a href="#" class="header-nav-list-sub__link">Сотрудничество</a>
+							</li>
+							<li class="header-nav-list-sub__item">
+								<a href="#" class="header-nav-list-sub__link">Программа лояльности</a>
+							</li>
+						</ul>
+					</li>
+					<li class="header-nav-list__item header-anim">
+						<a href="#" class="header-nav-list__link">Доставка и оплата</a>
+					</li>
+					<li class="header-nav-list__item header-nav-list__element_no-lg header-anim">
+						<a href="#" class="header-nav-list__link">Наши магазины</a>
+					</li>
+					<li class="header-nav-list__item header-nav-list__element_no-md header-anim">
+						<a href="#" class="header-nav-list__link">Дисконт-центр</a>
+					</li>
+					<li class="header-nav-list__item header-anim">
+						<a href="#" class="header-nav-list__link">Акции <span class="header-nav-list__element_no-md">и события</span></a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<div class="header__right">
+			<div class="header-contacts">
+				<!-- todo выбор города -->
+				<div class="header-contacts-city _select-city header-anim">
+					<div class="header-contacts-city__selected" onclick="o2.header.location.citySelectDropdownToggle();">
+						<div class="header-contacts-city__selected-name _select-city-name">Москва</div>
+						<div class="header-contacts-city__arrow">
+							<svg role="img" class="arrow-down">
+								<use xlink:href="#arrow-down"></use>
+							</svg>
+						</div>
+					</div>
+					<div class="header-contacts-city-list">
+						<div class="header-contacts-city-list__label">
+							Выберите <br>
+							ваш регион:
+						</div>
+						<ul class="header-contacts-city-list__items">
+							<li class="header-contacts-city-list__item" onclick="o2.header.location.selectCityInHeader(this);" data-city-key="калуга">Калуга</li>
+							<li class="header-contacts-city-list__item" onclick="o2.header.location.selectCityInHeader(this);" data-city-key="брянск">Брянск</li>
+							<li class="header-contacts-city-list__item" onclick="o2.header.location.selectCityInHeader(this);" data-city-key="серпухов">Серпухов</li>
+							<li class="header-contacts-city-list__item" onclick="o2.header.location.selectCityInHeader(this);" data-city-key="волгоград">Волгоград</li>
+							<li class="header-contacts-city-list__item" onclick="o2.header.location.selectCityInHeader(this);" data-city-key="сочи">Сочи</li>
+							<li class="header-contacts-city-list__item" onclick="o2.header.location.selectCityInHeader(this);" data-city-key="краснодар">Краснодар</li>
+							<li class="header-contacts-city-list__item" onclick="o2.header.location.selectCityInHeader(this);" data-city-key="ярославль">Ярославль</li>
+							<li class="header-contacts-city-list__item" onclick="o2.header.location.selectCityInHeader(this);" data-city-key="киров">Киров</li>
+							<li class="header-contacts-city-list__item" onclick="o2.header.location.selectCityInHeader(this);" data-city-key="иваново">Иваново</li>
+							<li class="header-contacts-city-list__item" onclick="o2.header.location.selectCityInHeader(this);" data-city-key="тюмень">Тюмень</li>
+							<li class="header-contacts-city-list__item" onclick="o2.header.location.selectCityInHeader(this);" data-city-key="пермь">Пермь</li>
+							<li class="header-contacts-city-list__item" onclick="o2.header.location.selectCityInHeader(this);" data-city-key="томск">Томск</li>
+						</ul>
+					</div>
+				</div>
+				<div class="header-contacts__phone header-anim">
+					<a href="javascript:void(0)" class="header-contacts__phone-link" onclick="o2.header.openPopover('request')">8 (800) 551-67-91</a>
+				</div>
+			</div>
+			<div class="header-actions">
+				<a class="header-actions__login header-anim" onclick="o2.header.openPopover('login')">Войти</a>
+				<a href="#" class="header-cart header-anim">
+					<div class="header-cart__label">Корзина </div>
+					<div class="header-cart__items">
+						<div class="_cartNum header-cart__items-count">
+							<svg xmlns="http://www.w3.org/2000/svg" width="6" height="8" viewBox="0 0 6 8">
+								<text id="_0" data-name="0" transform="translate(3 6)" fill="#613175" font-size="8" font-family="Helvetica"><tspan x="-2.225" y="0">0</tspan></text>
+							</svg>
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+		<div class="header-burger header-anim" onclick="o2.popups.toggleByBurger('menu')">
+			<div class="header-burger__line header-burger__line_top"></div>
+			<div class="header-burger__line header-burger__line_middle"></div>
+			<div class="header-burger__line  header-burger__line_bottom"></div>
+		</div>
+	</header>
+{% endblock %}

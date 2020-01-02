@@ -1,0 +1,446 @@
+.about-brand
+{
+	.why-riforma-wr
+	{
+		padding-top: 0;
+	}
+
+	.riforma-furniture-advantages
+	{
+		margin-bottom: 77px;
+	}
+}
+
+.about-brand__media
+{
+	width: 100%;
+	height: 630px;
+	margin-bottom: 75px;
+	img
+	{
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+
+.about-brand-advantage
+{
+	display: flex;
+	justify-content: space-between;
+
+	&:not(:last-child)
+	{
+		margin-bottom: 20px;
+	}
+}
+
+.about-brand-advantage--reverse
+{
+	align-items: flex-end;
+	position: relative;
+	top: -88px;
+
+	.about-brand-advantage__img
+	{
+		order: 1;
+	}
+
+	.about-brand-advantage__descr
+	{
+		order: 0;
+		padding: 0 0 57px;
+	}
+}
+
+.about-brand-advantage__img, .about-brand-advantage__descr
+{
+	flex: 0 0 calc(50% - 22px);
+	max-width: calc(50% - 22px);
+}
+
+.about-brand-advantage__img
+{
+	height: 378px;
+
+	img, source
+	{
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+
+.about-brand-advantage__descr
+{
+	padding-top: 59px;
+	font-size: 14px;
+	line-height: 24px;
+}
+
+.about-brand__reviews
+{
+	margin-bottom: 93px;
+}
+
+.about-brand-review
+{
+	background-color: #f1f1f1;
+	width: 704px;
+	max-width: 704px;
+	margin-right: 40px;
+	padding: 34px 40px 48px;
+	position: relative;
+	font-size: 16px;
+	line-height: 24px;
+}
+
+.about-brand-review__img
+{
+	width: 302px;
+	height: 219px;
+	margin-bottom: 31px;
+
+	img, source
+	{
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+
+.about-brand-review__rate
+{
+	display: flex;
+	position: absolute;
+	top: 45px;
+	right: 36px;
+}
+
+.about-brand-review__rate-item
+{
+	width: 17px;
+	height: 16px;
+
+	&:not(:last-child)
+	{
+		margin-right: 9px;
+	}
+}
+
+.about-brand-review__person
+{
+	font-family: $second-font;
+	font-size: 16px;
+	line-height: 18px;
+	margin-bottom: 15px;
+}
+
+.about-brand-review__text
+{
+	display: block;
+	overflow: hidden;
+	max-height: 45px;
+	transition: height 1s ease;
+}
+
+.about-brand-review__text_view
+{
+	transition: height 1s ease;
+	height: auto;
+	max-height: initial !important;
+	overflow: visible !important;
+}
+.about-brand-review__show-full
+{
+	color: #9F9F9F;
+}
+
+.about-brand-review__top
+{
+	display: flex;
+	justify-content: space-between;
+}
+
+.about-brand-review__rating
+{
+	display: flex;
+}
+
+@media (min-width: $large)
+{
+	.about-brand-advantage__img
+	{
+		height: unset;
+	}
+	.about-brand-advantage__descr,
+	.about-brand-review__text,
+	.about-brand-review__date
+	{
+		font-size: 0.9rem;
+		line-height: 1.3rem;
+	}
+	.about-brand-review__person
+	{
+		font-size: 1rem;
+	}
+}
+@media (min-width: 1440px)
+{
+	.about-brand
+	{
+		.riforma-furniture-advantages
+		{
+			padding-top: 101px;
+		}
+
+		.why-riforma-wr
+		{
+			padding-bottom: 101px;
+		}
+
+		.why-riforma__text
+		{
+			max-width: 825px;
+			padding-right: 25px;
+		}
+
+		.why-riforma__text--bottom
+		{
+			padding-right: 75px;
+		}
+	}
+
+	.about-brand__reviews
+	{
+		.section__title
+		{
+			margin-bottom: 32px;
+		}
+	}
+}
+
+@media (max-width: $medium)
+{
+	.about-brand__media
+	{
+		height: 354px;
+		margin-bottom: 56px;
+	}
+
+	.about-brand-review
+	{
+		width: 468px;
+		max-width: 468px;
+		padding-top: 64px;
+	}
+
+	.about-brand-review__rate
+	{
+		top: 24px;
+		right: 40px;
+	}
+
+	.about-brand-review__img
+	{
+		width: 100%;
+	}
+
+	.about-brand-advantage:not(:last-child)
+	{
+		margin-bottom: 43px;
+	}
+
+	.about-brand-advantage--reverse
+	{
+		top: 0;
+	}
+}
+
+@media (max-width: $tablet)
+{
+	.about-brand__media
+	{
+		height: 233px;
+	}
+
+	.about-brand-advantage
+	{
+		flex-wrap: wrap;
+
+		&:not(:last-child)
+		{
+			margin-bottom: 25px;
+		}
+	}
+
+	.about-brand-advantage--reverse
+	{
+		.about-brand-advantage__img
+		{
+			order: 0;
+		}
+
+		.about-brand-advantage__descr
+		{
+			order: 1;
+			padding: 0;
+		}
+	}
+
+	.about-brand-advantage__img, .about-brand-advantage__descr
+	{
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+
+	.about-brand-advantage__img
+	{
+		margin-bottom: 20px;
+	}
+
+	.about-brand-advantage__descr
+	{
+		padding-top: 0;
+	}
+
+	.about-brand-review
+	{
+		width: 420px;
+		max-width: 420px;
+	}
+	.about-brand-review__text
+	{
+		max-height: 95px;
+	}
+	.about-brand-review__text_view
+	{
+		max-height: initial;
+		overflow: visible;
+	}
+}
+
+@media (max-width: $mobile)
+{
+	.about-brand
+	{
+		.why-riforma-wr
+		{
+			padding-bottom: 0;
+			margin-bottom: 54px;
+		}
+
+		.why-riforma__text
+		{
+			max-width: 100%;
+			padding-right: 32px;
+		}
+
+		.section__title
+		{
+			margin-bottom: 16px;
+		}
+
+		.riforma-furniture-advantages
+		{
+			margin-bottom: 43px;
+		}
+	}
+
+	.about-brand__media
+	{
+		height: 174px;
+		margin-bottom: 32px;
+	}
+
+	.about-brand__advantages
+	{
+		margin-bottom: 23px;
+	}
+
+	.about-brand-advantage__img
+	{
+		height: 178px;
+	}
+
+	.about-brand-advantage__descr
+	{
+		font-size: 14px;
+		line-height: 21px;
+	}
+
+	.about-brand__reviews
+	{
+		margin-bottom: 32px;
+
+		.section__title
+		{
+			margin-bottom: 30px;
+		}
+	}
+
+	.about-brand-review
+	{
+		padding: 43px 16px 23px 20px;
+		width: 252px;
+		max-width: 252px;
+		margin-right: 20px;
+	}
+
+	.about-brand-review__rate
+	{
+		top: 19px;
+		right: 21px;
+	}
+
+	.about-brand-review__rate-item
+	{
+		width: 8px;
+		height: 8px;
+
+		&:not(:last-child)
+		{
+			margin-right: 4px;
+		}
+	}
+
+	.about-brand-review__img
+	{
+		height: 131px;
+		margin-bottom: 13px;
+	}
+
+	.about-brand-review
+	{
+		font-size: 10px;
+		line-height: 16px;
+	}
+
+	.about-brand-review__person
+	{
+		font-size: 14px;
+		line-height: 14px;
+		margin-bottom: 5px;
+	}
+	.about-brand-review__date
+	{
+		font-size: 12px;
+	}
+	.about-brand-review__text
+	{
+		margin-bottom: 6px;
+		-webkit-line-clamp: unset;
+		max-height: unset;
+		font-size: 14px;
+		line-height: 18px;
+		max-height: 70px;
+	}
+	.about-brand-review__show-full
+	{
+		font-size: 14px;
+	}
+	.about-brand-review__text_view
+	{
+		max-height: initial;
+	}
+}

@@ -1,0 +1,89 @@
+{% if parallax == 'true' %}
+	<div class="large-slider-wr _slider-wr {{classes}}">
+		<div class="large-slider">
+			{% for item in content %}
+				<div class="large-slider-slide-wr parallax-slide">
+					<div class="large-slider-slide">
+						<div class="large-slider-slide__slide">
+							<div class="large-slider-bg">
+								<picture>
+									<source data-srcset="img/assets/{{item}}-phone.jpg" media="(max-width: 740px)">
+									<source data-srcset="img/assets/{{item}}-tablet.jpg" media="(max-width: 950px)">
+									<source data-srcset="img/assets/{{item}}-1000.jpg" media="(max-width: 1200px)">
+									<source data-srcset="img/assets/{{item}}.jpg">
+									<img class="lazy-image" data-src="img/assets/{{item}}.jpg" alt="">
+								</picture>
+							</div>
+							<div class="large-slider-sofa-wr _sofa">
+								<div class="large-slider-sofa" onmouseenter="o2.sliderParallax.sofaOnSlider.enter(this)" onmouseleave="o2.sliderParallax.sofaOnSlider.leave()">
+									<picture>
+										<source data-srcset="img/assets/{{item}}-sofa-mobile.png" media="(max-width: 740px)">
+										<source data-srcset="img/assets/{{item}}-sofa-tablet.png" media="(max-width: 950px)">
+										<source data-srcset="img/assets/{{item}}-sofa-1000.png" media="(max-width: 1200px)">
+										<source data-srcset="img/assets/{{item}}-sofa.png">
+										<img class="lazy-image" data-src="img/assets/{{item}}-sofa.png" alt="">
+									</picture>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="large-slider-content">
+						<div class="large-slider-content__header">
+							Диваны для счастья, <br>
+							на которых легко.
+						</div>
+						<div class="large-slider-content__text">
+							Когда ты&nbsp;чего-то достигаешь&nbsp;&mdash; ты&nbsp;учишься наслаждаться качеством жизни и&nbsp;делиться этим с&nbsp;близкими.
+							<div>
+								<a href="#" class="large-slider-content__link">Узнать больше</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+		<div class="slider-nav">
+			<div class="slider-nav__arrow slider-nav__arrow_left _slider-prev">
+				<svg role="img" class="slider-arrow">
+				  <use xlink:href="#slider-arrow"></use>
+				</svg>
+			</div>
+			<div class="slider-nav__arrow large-slider-nav__arrow_right _slider-next">
+				<svg role="img" class="slider-arrow">
+				  <use xlink:href="#slider-arrow"></use>
+				</svg>
+			</div>
+		</div>
+	</div>
+{% endif %}
+{% if parallax == 'false' %}
+	<div class="large-slider-wr _slider-wr {{classes}}">
+		<div class="large-slider">
+			{% for item in content %}
+				<div class="large-slider-slide-wr">
+					<div class="large-slider-slide">
+						<picture>
+							<source data-srcset="img/assets/{{item}}-phone.jpg, img/assets/{{item}}-phone@2x.jpg 2x" media="(max-width: 740px)">
+							<source data-srcset="img/assets/{{item}}-tablet.jpg, img/assets/{{item}}-tablet@2x.jpg 2x" media="(max-width: 950px)">
+							<source data-srcset="img/assets/{{item}}-1000.jpg, img/assets/{{item}}-1000@2x.jpg 2x" media="(max-width: 1200px)">
+							<source data-srcset="img/assets/{{item}}.jpg, img/assets/{{item}}@2x.jpg 2x">
+							<img class="lazy-image" data-src="img/assets/{{item}}.jpg" alt="">
+						</picture>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+		<!-- <div class="large-slider-nav">
+			<div class="large-slider-nav__arrow large-slider-nav__arrow_left _slider-prev">
+				<svg role="img" class="slider-arrow">
+				  <use xlink:href="#slider-arrow"></use>
+				</svg>
+			</div>
+			<div class="large-slider-nav__arrow large-slider-nav__arrow_right _slider-next">
+				<svg role="img" class="slider-arrow">
+				  <use xlink:href="#slider-arrow"></use>
+				</svg>
+			</div>
+		</div> -->
+	</div>
+{% endif %}

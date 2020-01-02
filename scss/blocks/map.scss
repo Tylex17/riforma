@@ -1,0 +1,206 @@
+.map
+{
+	display: flex;
+	width: 100%;
+
+	justify-content: space-between;
+
+	.ymaps-2-1-74-placemark-overlay
+	{
+		transition: transform .2s ease !important;
+	}
+
+}
+._map
+{
+	.ymaps-2-1-74-placemark-overlay
+	{
+		transition: transform .2s ease !important;
+	}
+	.map__placemark_hover
+	{
+	
+		transform: scale(1.2);
+	}
+
+}
+
+.map__left
+{
+	flex-shrink: 0;
+	flex-basis: 330px;
+	margin-right: 45px;
+}
+
+.map__right
+{
+	flex: 1;
+	min-height: 500px;
+
+	.map__title
+	{
+		display: none;
+	}
+}
+
+.map-container
+{
+	min-height: 500px;
+	max-width: 100%;
+	margin-bottom: 22px;
+}
+
+.map__new-window
+{
+	a
+	{
+		font-size: 14px;
+		line-height: 15px;
+		color: #9f9f9f;
+		transition: all .125s;
+
+		&:hover
+		{
+			color: #000;
+		}
+	}
+}
+
+.map__title
+{
+	font-size: 24px;
+	line-height: 40px;
+	font-family: $second-font;
+	margin-bottom: 23px;
+}
+
+.map__text
+{
+	font-size: 14px;
+	line-height: 24px;
+}
+
+.map__text-link
+{
+	font-size: 14px;
+	font-family: $second-font;
+	color: #000;
+}
+
+@media (min-width: $large)
+{
+	.map__text
+	{
+		font-size: 0.9rem;
+		line-height: 1.4rem;
+	}
+	.map__new-window a
+	{
+		font-size: 0.8rem;
+	}
+	.map__left
+	{
+		flex-basis: 500px;
+	}
+}
+@media (max-width: $medium)
+{
+	.map-container
+	{
+		width: 100%;
+		min-height: 332px;
+	}
+	// .map
+	// {
+	// 	flex-wrap: wrap;
+	// }
+	.map__left
+	{
+		flex-basis: 275px;
+		margin-right: 25px;
+	}
+	.map__right
+	{
+		width: 375px; /* todo */
+		display: block;
+	}
+	.map__text
+	{
+		font-size: 12px;
+		line-height: 22px;
+	}
+	.map__text-link
+	{
+		font-size: 12px;
+	}
+	.map__title
+	{
+		font-size: 17px;
+		line-height: 26px;
+	}
+	.map__title br
+	{
+		display: none;
+	}
+/////////////
+}
+
+@media (max-width: $tablet)
+{
+	.map-container
+	{
+		width: 100%;
+	}
+	.map
+	{
+		flex-wrap: wrap;
+	}
+
+	.map__right
+	{
+		width: 690px; /* todo */
+		display: block;
+	}
+
+	.map__left
+	{
+		flex-basis: 100%;
+		margin-bottom: 30px;
+	}
+
+	.map__title br
+	{
+		display: none;
+	}
+}
+
+@media (max-width: $mobile)
+{
+	.map__right
+	{
+		width: 100%; /* todo */
+		min-height: 191px;
+	}
+	.map__title
+	{
+		font-size: 17px;
+		line-height: 21px;
+		max-width: 200px;
+		margin-bottom: 11px;
+	}
+	.map__text
+	{
+		font-size: 14px;
+		line-height: 21px;
+	}
+	.map-container
+	{
+		margin-bottom: 15px;
+		min-height: 332px;
+	}
+	.map__new-window a
+	{
+		font-size: 12px;
+		line-height: 18px;
+	}
+}

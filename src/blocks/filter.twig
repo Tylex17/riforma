@@ -1,0 +1,161 @@
+<div class="filter">
+	<div class="filter-groups">
+		<div class="filter-group">
+			<div class="filter-group-label">
+				Найдено: 320 моделей
+			</div>
+			<button class="filter-reset" onclick="console.log('reset filter');">Сбросить фильтры</button>
+		</div>
+		<div class="filter-group">
+			<div class="filter-group-header">
+				Механизм
+			</div>
+			{% set mechanisms = ['Suzie', 'Fincher', 'Torro', 'Trifolder', 'Lima'] %}
+			{% for mechanism in mechanisms %}
+				<div class="filter-property filter-checkbox">
+					<label class="o-checkbox">
+						<input type="checkbox" class="o-checkbox__input">
+						<div class="o-checkbox__body">
+							<span class="o-checkbox__box"></span>
+							<span class="o-checkbox__text">{{mechanism}}</span>
+						</div>
+					</label>
+				</div>
+			{% endfor %}
+		</div>
+		<div class="filter-group">
+			<div class="filter-group-header">
+				Габариты, cм
+			</div>
+			<div class="filter-slider">
+				<div class="filter-slider__label">Ширина</div>
+				{% include './range-slider.twig' with {fieldName: 'namge', type: 'single', min: 0, max: 100, from: 20, to: 80} %}
+			</div>
+			<div class="filter-slider">
+				<div class="filter-slider__label">Длина</div>
+				{% include './range-slider.twig' with {fieldName: 'namge', type: 'single', min: 0, max: 100, from: 20, to: 80} %}
+			</div>
+			<div class="filter-slider">
+				<div class="filter-slider__label">Высота</div>
+				{% include './range-slider.twig' with {fieldName: 'namge', type: 'single', min: 0, max: 100, from: 20, to: 80} %}
+			</div>
+		</div>
+		<div class="filter-group">
+			<div class="filter-group-header">
+				Cпальное место, cм
+			</div>
+			<div class="filter-slider">
+				<div class="filter-slider__label">Ширина</div>
+				{% include './range-slider.twig' with {fieldName: 'namge', type: 'range', min: 0, max: 100, from: 20, to: 80} %}
+			</div>
+			<div class="filter-slider">
+				<div class="filter-slider__label">Длина</div>
+				{% include './range-slider.twig' with {fieldName: 'namge', type: 'range', min: 0, max: 100, from: 20, to: 80} %}
+			</div>
+			<div class="filter-slider">
+				<div class="filter-slider__label">Высота</div>
+				{% include './range-slider.twig' with {fieldName: 'namge', type: 'range', min: 0, max: 100, from: 20, to: 80} %}
+			</div>
+		</div>
+		<div class="filter-group dropdown-wr">
+			<div class="filter-group-header">
+				Цвет
+			</div>
+			{% set colors = ['Черный', 'Серый', 'Белый', 'Фиолетовый', 'Синий', 'Желтый'] %}
+			<div class="filter-group-visible-colors">
+				{% for color in colors %}
+					<div class="filter-color filter-color-switch">
+						<label class="o-checkbox">
+							<input type="checkbox" class="o-checkbox__input">
+							<div class="o-checkbox__body">
+								<span class="o-checkbox__box filter-color__img">
+									<picture>
+										<source data-srcset="img/assets/color-1.jpg, img/assets/color-1@2x.jpg 2x">
+										<img class="lazy-image" data-src="img/assets/color-1.jpg" alt="color">
+									</picture>
+								</span>
+								<span class="o-checkbox__text">{{color}}</span>
+							</div>
+						</label>
+					</div>
+				{% endfor %}
+			</div>
+			<div class="filter-group-dropdown dropdown-list">
+				{% for color in colors %}
+					<div class="filter-color filter-checkbox filter-color-switch">
+						<label class="o-checkbox">
+							<input type="checkbox" class="o-checkbox__input">
+							<div class="o-checkbox__body">
+								<span class="o-checkbox__box filter-color__img">
+									<picture>
+										<source data-srcset="img/assets/color-1.jpg, img/assets/color-1@2x.jpg 2x">
+										<img class="lazy-image" data-src="img/assets/color-1.jpg" alt="color">
+									</picture>
+								</span>
+								<span class="o-checkbox__text">{{color}}</span>
+							</div>
+						</label>
+					</div>
+				{% endfor %}
+			</div>
+			<div class="filter-show-more dropdown-activator" onclick="o2.dropdown.toggle(this);">
+				<div class="filter-show-more__closed-text">
+					Показать все цвета
+				</div>
+				<div class="filter-show-more__opened-text">
+					Свернуть
+				</div>
+			</div>
+		</div>
+		<div class="filter-group">
+			<div class="filter-group-header">
+				Бельевой ящик
+			</div>
+			<div class="filter-property filter-checkbox">
+				<label class="o-checkbox">
+					<input type="checkbox" class="o-checkbox__input">
+					<div class="o-checkbox__body">
+						<span class="o-checkbox__box"></span>
+						<span class="o-checkbox__text">Есть</span>
+					</div>
+				</label>
+			</div>
+			<div class="filter-property filter-checkbox">
+				<label class="o-checkbox">
+					<input type="checkbox" class="o-checkbox__input">
+					<div class="o-checkbox__body">
+						<span class="o-checkbox__box"></span>
+						<span class="o-checkbox__text">Нет</span>
+					</div>
+				</label>
+			</div>
+		</div>
+		<div class="filter-group">
+			<div class="filter-group-header">
+				Материал
+			</div>
+			<div class="filter-property filter-checkbox">
+				<label class="o-checkbox">
+					<input type="checkbox" class="o-checkbox__input">
+					<div class="o-checkbox__body">
+						<span class="o-checkbox__box"></span>
+						<span class="o-checkbox__text">Ткань</span>
+					</div>
+				</label>
+			</div>
+			<div class="filter-property filter-checkbox">
+				<label class="o-checkbox">
+					<input type="checkbox" class="o-checkbox__input">
+					<div class="o-checkbox__body">
+						<span class="o-checkbox__box"></span>
+						<span class="o-checkbox__text">Кожа</span>
+					</div>
+				</label>
+			</div>
+		</div>
+	</div>
+	<div class="filter-actions">
+		<button class="btn btn_accent filter-submit">Применить</button>
+		<button class="filter-reset" onclick="console.log('reset filter');">Сбросить фильтры</button>
+	</div>
+</div>

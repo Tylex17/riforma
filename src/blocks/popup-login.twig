@@ -1,0 +1,36 @@
+{% extends "../layouts/popup-body.twig" %}
+{% set popupName = 'login' %}
+{% block popupConent %}
+	<div class="popover-login-wr">
+		<form action="" novalidate="">
+			<div class="popover-login-input__inputs">
+				<label class="input-wr popover-login-input">
+					<input type="text" class="input _required" name="login" value="" onkeyup="this.setAttribute('value', this.value);" onchange="this.setAttribute('value', this.value);">
+					<div class="input__label">Логин*</div>
+					<div class="input__sub-text input__sub-text_text">Введите логин</div>
+					<div class="input__sub-text input__sub-text_error"></div>
+				</label>
+				<label class="input-wr popover-login-input">
+					<input type="password" class="input _required" value="" onkeyup="this.setAttribute('value', this.value);" onchange="this.setAttribute('value', this.value);">
+					<div class="input__label">Пароль</div>
+					<div class="input__sub-text input__sub-text_text">Введите пароль</div>
+					<div class="input__sub-text input__sub-text_error"></div>
+				</label>
+				<label class="o-checkbox popover-login-save">
+					<input type="checkbox" class="o-checkbox__input">
+					<div class="o-checkbox__body">
+						<span class="o-checkbox__box"></span>
+						<span class="o-checkbox__text">Запомнить меня</span>
+					</div>
+				</label>
+				<button class="btn btn_accent btn_full popover-login-submit">Войти</button>
+			</div>
+		</form>
+		<div class="popover-login-signup">
+			У вас нет аккаунта? <a href="sign-up.html">Регистрация</a>
+		</div>
+		<div class="popover-login-forgot">
+			<a href="#">Забыли пароль?</a>
+		</div>
+	</div>
+{% endblock %}

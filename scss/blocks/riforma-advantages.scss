@@ -1,0 +1,170 @@
+.riforma-furniture-advantages
+{
+	display: flex;
+	justify-content: space-between;
+	padding-top: 70px;
+}
+.riforma-furniture-advantage
+{
+	width: 200px;
+}
+.riforma-furniture-advantage__icon
+{
+	height: 135px;
+}
+.riforma-furniture-advantage__icon_1
+{
+	padding-top: 40px;
+}
+.riforma-furniture-advantage__icon_2
+{
+	padding-top: 8px;
+}
+.riforma-furniture-advantage__icon_4,
+.riforma-furniture-advantage__icon_5
+{
+	padding-top: 20px;
+}
+.riforma-furniture-advantage__text
+{
+	line-height: 24px;
+}
+
+@media (min-width: $large)
+{
+	.riforma-furniture-advantage__text
+	{
+		font-size: 1rem;
+		line-height: 1.3rem;
+	}
+}
+
+@media (max-width: $medium)
+{
+	.riforma-furniture-advantages
+	{
+		padding-top: 60px;
+	}
+	.riforma-furniture-advantage
+	{
+		width: 125px;
+	}
+	.riforma-furniture-advantage_2
+	{
+		width: 150px;
+	}
+	.riforma-furniture-advantage_5
+	{
+		display: none;
+	}
+	.riforma-furniture-advantage__text
+	{
+		font-size: 12px;
+		line-height: 18px;
+	}
+	.riforma-furniture-advantage__icon
+	{
+		padding-top: 0;
+		height: 91px;
+		svg
+		{
+			height: auto;
+		}
+	}
+	.riforma-furniture-advantage__icon_1
+	{
+		padding-top: 21px;
+		svg
+		{
+			width: 56px;
+		}
+	}
+	.riforma-furniture-advantage__icon_2 svg
+	{
+		width: 55px;
+	}
+	.riforma-furniture-advantage__icon_3 svg
+	{
+		width: 43px;
+	}
+	.riforma-furniture-advantage__icon_4 svg
+	{
+		width: 54px;
+	}
+}
+
+@media (max-width: $tablet)
+{
+	.riforma-furniture-advantage_4
+	{
+		display: none;
+	}
+}
+
+@media (max-width: $mobile)
+{
+	.riforma-furniture-advantages
+	{
+		flex-direction: column;
+		padding-top: 14px;
+	}
+	.riforma-furniture-advantage
+	{
+		display: flex;
+		width: 100%;
+		margin-bottom: 28px;
+		align-items: center;
+		padding-left: 21px;
+		order: 1;
+	}
+	.riforma-furniture-advantage__icon
+	{
+		flex-basis: 44px;
+		min-width: 44px;
+		text-align: center;
+		min-height: inherit;
+		line-height: 0;
+		padding-top: 0;
+		margin-right: 26px;
+		height: auto;
+		svg
+		{
+			max-width: 44px;
+		}
+	}
+	.riforma-furniture-advantage_3
+	{
+		order: 5;
+		margin-bottom: 0;
+	}
+	.riforma-furniture-advantage_4
+	{
+		br
+		{
+			display: none;
+		}
+	}
+	.riforma-furniture-advantage__icon_3 svg
+	{
+		width: 28px;
+	}
+	.riforma-furniture-advantage_5
+	{
+		order: 4;
+		.bold
+		{
+			display: block;
+			br
+			{
+				display: none;
+			}
+		}
+	}
+	.riforma-furniture-advantage__text
+	{
+		max-width: 232px;
+		font-size: 14px;
+		line-height: 21px;
+		flex: 1;
+	}
+}

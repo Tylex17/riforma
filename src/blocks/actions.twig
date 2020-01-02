@@ -1,0 +1,42 @@
+<section class="actions">
+	<h2 class="section__title">
+		{{ title }}
+	</h2>
+	{% for i in 0..rowsCount-1 %}
+		{% if i is even %}
+			<div class="actions__row {{ modifier }}">
+				<div class="actions__image " onclick="o2.popups.open('action')">
+					<picture>
+						<source data-srcset="img/assets/action-phone.jpg, img/assets/action-phone@2x.jpg 2x" media="(max-width: 740px)">
+						<source data-srcset="img/assets/action-tablet.jpg, img/assets/action-tablet@2x.jpg 2x" media="(max-width: 950px)">
+						<source data-srcset="img/assets/action.jpg, img/assets/action@2x.jpg 2x">
+						<img data-src="img/assets/action.jpg" class="lazy-image" alt="">
+					</picture>
+				</div>
+				<div class="actions__desc">
+					<div class="actions__date">28 марта</div>
+					<div class="actions__text">
+						Дари тепло! В&nbsp;марте скидка 15% на&nbsp;весь модельный ряд пледов из наличия в салоне
+					</div>
+				</div>
+			</div>
+		{% else %}
+			<div class="actions__row {{ modifier }} actions__row_reverse">
+				<div class="actions__desc">
+					<div class="actions__date">14 марта</div>
+					<div class="actions__text">
+						Специальное предложение В&nbsp;апреле на модель Денвер&nbsp;действует специальное предложение.
+					</div>
+				</div>
+				<div class="actions__image" onclick="o2.popups.open('second-action')">
+					<picture>
+						<source data-srcset="img/assets/action-phone.jpg, img/assets/action-phone@2x.jpg 2x" media="(max-width: 740px)">
+						<source data-srcset="img/assets/action-tablet.jpg, img/assets/action-tablet@2x.jpg 2x" media="(max-width: 950px)">
+						<source data-srcset="img/assets/action.jpg, img/assets/action@2x.jpg 2x">
+						<img data-src="img/assets/action.jpg" class="lazy-image" alt="">
+					</picture>
+				</div>
+			</div>
+		{% endif %}
+	{% endfor %}
+</section>

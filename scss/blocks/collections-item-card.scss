@@ -1,0 +1,292 @@
+.collections-item-card
+{
+	position: relative;
+	flex-basis: calc(50% - 19px);
+	max-width: 272px;
+	color: #000;
+	margin-bottom: 40px;
+	&:nth-child(5)
+	{
+		margin-bottom: 0;
+	}
+	&:hover
+	{
+		.collections-item-card__image,
+		.collections-item-card__actions,
+		.collections-item-card__item-top
+		{
+			transform: translateY(-33px);
+			transition: .6s;
+		}
+		.collections-item-card__item-top
+		{
+			transition-delay: .1s;
+		}
+	}
+}
+.collections-item-card__image
+{
+	display: block;
+	line-height: 0;
+	margin-bottom: 21px;
+	height: 0;
+	padding-bottom: 72.47%;
+	position: relative;
+	transition: .5s;
+	img
+	{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		object-fit: cover;
+	}
+}
+.collections-item-card__item-top
+{
+	display: flex;
+	justify-content: space-between;
+	// margin-bottom: 40px;
+	transition: .5s;
+}
+.collections-item-card__item-name,
+.collections-item-card__item-type,
+.collections-item-card__item-descr,
+.collections-item-card__item-current-price,
+.collections-item-card__item-old-price
+{
+	font-size: 14px;
+	line-height: 22px;
+}
+.collections-item-card__item-name,
+.collections-item-card__item-current-price
+{
+	font-family: $second-font;
+	margin-bottom: 4px;
+	color: #000;
+}
+.collections-item-card__item-prices
+{
+	text-align: right;
+}
+.collections-item-card__item-old-price
+{
+	display: inline-block;
+	position: relative;
+}
+.collections-item-card__item-old-price:after
+{
+	content: '';
+	width: 100%;
+	height: 1px;
+	background-color: #000;
+	position: absolute;
+	top: 9px;
+	left: -1px;
+}
+
+.collections-item-card__actions
+{
+	position: absolute;
+	top: 17px;
+	left: 9px;
+	display: flex;
+	z-index: 1;
+	transition: 0.5s;
+}
+.collections-item-card__action
+{
+	width: 41px;
+	height: 41px;
+	margin-right: 6px;
+	border-radius: 50%;
+	border: 1px solid $accent-color;
+	color: $accent-color;
+	text-transform: uppercase;
+	font-family: $second-font;
+	font-size: 11px;
+	line-height: 42px;
+	text-align: center;
+	flex-shrink: 0;
+	cursor: default;
+	transition: .3s;
+	&:hover
+	{
+		transform: scale(1.1);
+	}
+}
+.collections__item_pic-right
+{
+	.collections-item__cards
+	{
+		margin-top: 0;
+	}
+}
+
+@media (min-width: $large)
+{
+	.collections-item-card
+	{
+		flex-basis: calc(50% - 15px);
+		max-width: none;
+	}
+	.collections-item-card__item-name,
+	.collections-item-card__item-type,
+	.collections-item-card__item-descr,
+	.collections-item-card__item-current-price,
+	.collections-item-card__item-old-price,
+	.collections-item-card__item-bot
+	{
+		font-size: 0.9rem;
+		line-height: 1.3rem;
+	}
+
+}
+
+@media (max-width: $medium)
+{
+	.collections-item-card
+	{
+		max-width: 152px;
+		flex-basis: calc(50% - 11px);
+		margin-bottom: 13px;
+		&:nth-child(5)
+		{
+			margin-bottom: 0;
+		}
+		&:hover
+		{
+			.collections-item-card__image,
+			.collections-item-card__actions,
+			.collections-item-card__item-top
+			{
+				transform: translateY(-15px);
+			}
+		}
+	}
+	.collections-item-card__actions
+	{
+		top: 7px;
+		left: 9px;
+	}
+	.collections-item-card__action
+	{
+		width: 30px;
+		height: 30px;
+		font-size: 8px;
+		line-height: 30px;
+	}
+	.collections-item-card__image
+	{
+		margin-bottom: 15px;
+	}
+	.collections-item-card__item-top
+	{
+		flex-direction: column;
+		// margin-bottom: 13px;
+	}
+	.collections-item-card__item-prices
+	{
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: flex-end;
+	}
+	.collections-item-card__item-current-price
+	{
+		margin-left: 10px;
+	}
+	.collections-item-card__item-old-price
+	{
+		&:after
+		{
+			top: 6px;
+		}
+	}
+	.collections-item-card__item-name,
+	.collections-item-card__item-type,
+	.collections-item-card__item-descr,
+	.collections-item-card__item-current-price,
+	.collections-item-card__item-old-price,
+	.collections-item-card__item-bot
+	{
+		font-size: 12px;
+		line-height: 15px;
+	}
+	.models-in-stock__action
+	{
+		width: 29px;
+		height: 29px;
+		font-size: 8px;
+		line-height: 30px;
+		text-align: center;
+	}
+	.models-in-stock__btn
+	{
+		display: block;
+		font-size: 12px;
+	}
+	.collections-item-card__actions
+	{
+		left: 6px;
+	}
+}
+
+@media (max-width: $tablet)
+{
+	.collections-item-card__action
+	{
+		width: 25px;
+		height: 25px;
+		font-size: 7px;
+		line-height: 25px;
+	}
+}
+
+@media (max-width: $mobile)
+{
+	.collections-item
+	{
+		margin-bottom: 25px;
+	}
+	.collections-item-card__item-current-price
+	{
+		margin: 0;
+	}
+	.collections-item-card__item-old-price
+	{
+		display: none;
+	}
+	.collections-item-card__item-name,
+	.collections-item-card__item-type,
+	.collections-item-card__item-descr,
+	.collections-item-card__item-current-price,
+	.collections-item-card__item-old-price,
+	.collections-item-card__item-bot
+	{
+		font-size: 13px;
+		line-height: 19px;
+	}
+	.collections-item-card__image
+	{
+		margin-bottom: 10px;
+		padding-bottom: 71.28%;
+	}
+	.collections-item-card
+	{
+		min-width: calc(50% - 7px);
+
+		&:nth-child(5)
+		{
+			margin-bottom: 0;
+		}
+		&:hover
+		{
+			.collections-item-card__image,
+			.collections-item-card__actions,
+			.collections-item-card__item-top
+			{
+				transform: unset;
+				transition: unset;
+			}
+		}
+	}
+}

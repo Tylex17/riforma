@@ -1,0 +1,58 @@
+{% extends "../layouts/popover.twig" %}
+
+{% set popoverName = 'login' %}
+{% set includePopup = 'popup-login' %}
+{% block popoverContent %}
+	<div class="popover-login-wr">
+		<div class="popover-login-visible">
+			<form action="" novalidate="" onsubmit="o2.registration.send(this, event)">
+				<div class="popover-login-input__inputs">
+					<label class="input-wr popover-login-input">
+						<input type="text" class="input _required" value="" onkeyup="this.setAttribute('value', this.value);" onchange="this.setAttribute('value', this.value);">
+						<div class="input__label">Логин*</div>
+						<div class="input__sub-text input__sub-text_text">Введите логин</div>
+						<div class="input__sub-text input__sub-text_error"></div>
+					</label>
+					<label class="input-wr popover-login-input">
+						<input type="password" class="input _required" value="" onkeyup="this.setAttribute('value', this.value);" onchange="this.setAttribute('value', this.value);">
+						<div class="input__label">Пароль</div>
+						<div class="input__sub-text input__sub-text_text">Введите пароль</div>
+						<div class="input__sub-text input__sub-text_error"></div>
+					</label>
+					<label class="o-checkbox popover-login-save">
+						<input type="checkbox" class="o-checkbox__input">
+						<div class="o-checkbox__body">
+							<span class="o-checkbox__box"></span>
+							<span class="o-checkbox__text">Запомнить меня</span>
+						</div>
+					</label>
+					<button class="btn btn_accent btn_full popover-login-submit" type="submit">Войти</button>
+				</div>
+			</form>
+			<div class="popover-login-signup">
+				У вас нет аккаунта? <a href="registration.html">Регистрация</a>
+			</div>
+			<div class="popover-login-forgot">
+				<a href="#" onclick="o2.registration.restoreUserInfo(this, event)">Забыли пароль?</a>
+			</div>
+		</div>
+		<div class="popover-login-restore">
+			<div class="login-restore-message">
+			</div>
+			<form action="" novalidate="">
+				<div class="login-restore">
+					<label class="input-wr popover-restore-input">
+						<input type="text" class="input _required" value="" onkeyup="this.setAttribute('value', this.value);" onchange="this.setAttribute('value', this.value);">
+						<div class="input__label">Email*</div>
+						<div class="input__sub-text input__sub-text_text">Введите Email для восстановления доступа</div>
+						<div class="input__sub-text input__sub-text_error"></div>
+					</label>
+				</div>
+				<button class="btn btn_accent btn_full popover-login-submit popover-login-restore-submit" onclick="o2.registration.sendRestoreData(event)" type="submit">Восстановить</button>
+			</form>
+			<div class="popover-login-signup">
+				Вернуться к <a href="#" onclick="o2.registration.closeRestore(this, event)">входу</a>
+			</div>
+		</div>
+	</div>
+{% endblock %}

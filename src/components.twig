@@ -1,0 +1,7 @@
+{# index.twig #}
+{% extends "layouts/layout.twig" %}
+
+{% block page %}
+	{% include "blocks/breadcrumbs.twig" %}
+	{% include "blocks/sets.twig"  with {'name':'Комплект Vincent', 'cardsCount':2 } %}
+{% endblock %}

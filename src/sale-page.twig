@@ -1,0 +1,37 @@
+{# index.twig #}
+{% extends "layouts/layout.twig" %}
+
+{% block sidebar %}
+	{% include "./blocks/sidebar.twig" with {topFixed: false} %}
+	{% include "./blocks/filter.twig" %}
+{% endblock %}
+
+{% block page %}
+	<div class="sale-page">
+		{% include "blocks/breadcrumbs.twig" %}
+
+		<h2 class="section__title">Распродажа</h2>
+		{% include "blocks/large-slider.twig" with {"parallax": "true", "content": ["large-slider", "large-slider", "large-slider"], "classes": "top-large-slider"} %}
+		{% include "blocks/search-info.twig" %}
+		<div class="mobile-filter-wr dropdown-wr">
+			<div class="mobile-filter-btn dropdown-activator" onclick="o2.dropdown.toggle(this);">
+				<span class="mobile-filter-btn__closed-text">
+					Показать фильтр
+				</span>
+				<span class="mobile-filter-btn__opened-text">
+					Свернуть фильтр
+				</span>
+			</div>
+			<div class="mobile-filter dropdown-list">
+				{% include "blocks/filter.twig" %}
+			</div>
+		</div>
+		{% include "blocks/products.twig" with {"title": "Коллекция Весна/Лето 2018", "cardCount": 5, "modif": "section__title_margin-bot"} %}
+		<div class="main-products-more">
+			<a href="products" class="btn main-products-more__btn">Все предложения</a>
+		</div>
+	</div>
+
+	{% include "./blocks/popup-actions.twig" %}
+	{% include "./blocks/popup-second-actions.twig" %}
+{% endblock %}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Анимации слайдера</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<style>
+		.animations
+		{
+			max-width: 960px;
+			padding-left: 10px;
+			padding-right: 10px;
+			margin-left: auto;
+			margin-right: auto;
+			padding-top: 45px;
+			padding-bottom: 66px;
+		}
+		.animations__title
+		{
+			font-size: 36px;
+			text-align: left;
+			margin-bottom: 15px;
+		}
+		.animations__sub
+		{
+			font-size: 28px;
+		}
+		.animations__content
+		{
+			font-size: 12px;
+			line-height: 22px;
+			border: 1px solid #c2c2c2;
+			padding: 10px;
+		}
+		.btns-list
+		{
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+		.btn_anim
+		{
+			flex-basis: calc(33.33% - 30px);
+			margin-bottom: 20px;
+		}
+	</style>
+</head>
+<body>
+	{% include "../img/svg-symbols.svg" %}
+	<div class="container-wr main-container">
+		<div class="main-container__left">
+		</div>
+		<div class="content-wrapper main-container__right">
+			<div class="animations__title">Анимация слайдера <span class="animations__sub">(наведение на диван отключено)</span></div>
+			<div class="btns-list">
+				<button class="btn btn_anim" style="height: 38px;" onclick="setAnimation('key1')">Включить анимацию №1</button>
+				<button class="btn btn_anim" style="height: 38px;" onclick="setAnimation('key2')">Включить анимацию №2</button>
+				<button class="btn btn_anim" style="height: 38px;" onclick="setAnimation('key3')">Включить анимацию №3</button>
+				<button class="btn btn_anim" style="height: 38px;" onclick="setAnimation('key4')">Включить анимацию №4</button>
+				<button class="btn btn_anim" style="height: 38px;" onclick="setAnimation('key5')">Включить анимацию №5</button>
+				<button class="btn btn_anim" style="height: 38px;" onclick="setAnimation('key6')">Включить анимацию №6</button>
+			</div>
+			<div class="large-slider-slide-wr parallax-slide">
+				<div class="large-slider-slide">
+					<div class="large-slider-slide__slide">
+						<div class="large-slider-bg">
+							<picture>
+								<source srcset="img/assets/large-slider-phone.jpg" media="(max-width: 740px)">
+								<source srcset="img/assets/large-slider-tablet.jpg" media="(max-width: 950px)">
+								<source srcset="img/assets/large-slider-1000.jpg" media="(max-width: 1200px)">
+								<source srcset="img/assets/large-slider.jpg">
+								<img class="lazy-image" src="img/assets/large-slider.jpg" alt="">
+							</picture>
+						</div>
+						<div class="large-slider-sofa-wr _sofa">
+							<div class="large-slider-sofa">
+								<picture>
+									<source srcset="img/assets/large-slider-sofa-mobile.png" media="(max-width: 740px)">
+									<source srcset="img/assets/large-slider-sofa-tablet.png" media="(max-width: 950px)">
+									<source srcset="img/assets/large-slider-sofa-1000.png" media="(max-width: 1200px)">
+									<source srcset="img/assets/large-slider-sofa.png">
+									<img class="lazy-image" src="img/assets/large-slider-sofa.png" alt="">
+								</picture>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="large-slider-content">
+					<div class="large-slider-content__header">
+						Диваны для счастья, <br>
+						на которых легко.
+					</div>
+					<div class="large-slider-content__text">
+						Когда ты&nbsp;чего-то достигаешь&nbsp;&mdash; ты&nbsp;учишься наслаждаться качеством жизни и&nbsp;делиться этим с&nbsp;близкими.
+						<div>
+							<a href="#" class="large-slider-content__link">Узнать больше</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="js/vendors/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="js/vendors/anime.min.js"></script>
+	<script type="text/javascript" src="js/vendors/lazyload.min.js"></script>
+	<script>
+		window.placemarkImgURL = 'img/assets/marker.svg'
+		var anims = {
+			key1: [{"translateY":"-4%","rotate":"-0.9178288820653169deg","duration":1589.9240595755132},{"translateY":"-8%","rotate":"0.5337230978574459deg","duration":1860.536216882978},{"translateY":"-11%","rotate":"0.5209787107678832deg","duration":2229.7491177593947},{"translateY":"-14%","rotate":"-2.3715842498772943deg","duration":1677.733789409235},{"translateY":"-16%","rotate":"0.941946899948797deg","duration":2843.3182764633507},{"translateY":"-18%","rotate":"-1.4332923947441323deg","duration":2165.4738725411876},{"translateY":"-20%","rotate":"-2.0794306264072047deg","duration":1934.5788682305279},{"translateY":"-21%","rotate":"0.8204561230624852deg","duration":2378.855370339892},{"translateY":"-21%","rotate":"0.4051075392810164deg","duration":2801.4185200620695},{"translateY":"-21%","rotate":"2.0027403071839274deg","duration":2624.3082634910907},{"translateY":"-20%","rotate":"-0.10377041118408226deg","duration":2153.973102679593},{"translateY":"-19%","rotate":"0.3714743401331546deg","duration":1554.9724032000736},{"translateY":"-18%","rotate":"-1.1725933254284948deg","duration":1860.020304030363},{"translateY":"-16%","rotate":"1.7261920284968593deg","duration":1523.0340782967546},{"translateY":"-13%","rotate":"0.6255450740774537deg","duration":2815.1273603613204},{"translateY":"-10%","rotate":"-0.5784063737567569deg","duration":2013.7259664986095},{"translateY":"-6%","rotate":"-1.0242417495405975deg","duration":1629.1447948835928},{"translateY":"-2%","rotate":"-1.7718109656035763deg","duration":2493.1884892972726},{"translateY":"2%","rotate":"-0.7149327740179912deg","duration":2039.234462350073}],
+			key2: [{"translateY":"-9%","rotate":"2.1200492447739903deg","duration":1896.0717138609475},{"translateY":"-12%","rotate":"-0.6061686205265482deg","duration":2998.6408106060126},{"translateY":"-15%","rotate":"-1.7236133084020033deg","duration":2818.9362686467166},{"translateY":"-17%","rotate":"-0.459394048341756deg","duration":1605.6710971179914},{"translateY":"-19%","rotate":"1.110779500281709deg","duration":2936.70458339276},{"translateY":"-20%","rotate":"-2.187388916673169deg","duration":2768.6242892103032},{"translateY":"-21%","rotate":"-2.14037009766205deg","duration":2008.3055394940975},{"translateY":"-21%","rotate":"0.9188174727269818deg","duration":2188.2232814670447},{"translateY":"-21%","rotate":"-0.7552745864457611deg","duration":2431.327825521814},{"translateY":"-20%","rotate":"-0.0637723619513908deg","duration":1842.3492630044143},{"translateY":"-19%","rotate":"1.7426774648704892deg","duration":2870.4691603930323},{"translateY":"-17%","rotate":"2.0333682577524845deg","duration":1903.6567693860666},{"translateY":"-15%","rotate":"1.0388965015463958deg","duration":1690.7944353441078},{"translateY":"-12%","rotate":"-0.7239301146006893deg","duration":2858.4322847138765},{"translateY":"-9%","rotate":"2.343628136120852deg","duration":2931.6542552477617},{"translateY":"-5%","rotate":"2.38885878094794deg","duration":2258.5724401916004},{"translateY":"-1%","rotate":"-1.9909743191380769deg","duration":2731.25182745684}],
+			key3: [{"translateY":"-11%","rotate":"-0.20843004140259946deg","duration":1625.2987650552047},{"translateY":"-14%","rotate":"-1.9912806287390772deg","duration":2193.7999378453474},{"translateY":"-16%","rotate":"1.1678635134755488deg","duration":2297.4962483078493},{"translateY":"-18%","rotate":"0.5459878783225394deg","duration":1723.6541200808178},{"translateY":"-20%","rotate":"2.0659752965813283deg","duration":1528.6246764402774},{"translateY":"-20%","rotate":"1.4496249871214504deg","duration":2897.2318996813874},{"translateY":"-21%","rotate":"-1.7374730033775854deg","duration":2125.3997039251935},{"translateY":"-21%","rotate":"-0.820566955278903deg","duration":2592.8341488530414},{"translateY":"-20%","rotate":"0.7777221703119688deg","duration":1613.8542393961152},{"translateY":"-19%","rotate":"-0.5600387791064254deg","duration":2158.741057142212},{"translateY":"-18%","rotate":"0.4243889602835482deg","duration":2841.3886436392604},{"translateY":"-16%","rotate":"2.162750139678118deg","duration":2469.7962439424555},{"translateY":"-13%","rotate":"-0.8350490824665291deg","duration":2513.88723242989},{"translateY":"-10%","rotate":"2.13391309013263deg","duration":2007.7357452384272},{"translateY":"-7%","rotate":"-0.3242934762622598deg","duration":2318.914478181243},{"translateY":"-3%","rotate":"0.7118447144395725deg","duration":1521.4475105287052},{"translateY":"-1%","rotate":"-0.007115694518926574deg","duration":1545.2203422798796}],
+			key4: [{"translateY":"-6%","rotate":"-1.1355644046903257deg","duration":2175.494715960785},{"translateY":"-9%","rotate":"1.951505442792735deg","duration":2797.479683861502},{"translateY":"-12%","rotate":"-1.2342789808910226deg","duration":2147.7157383923345},{"translateY":"-15%","rotate":"0.6769660416111813deg","duration":1886.5709699637475},{"translateY":"-17%","rotate":"1.008029172195787deg","duration":1923.4174002091515},{"translateY":"-19%","rotate":"0.9980018641219859deg","duration":2752.2161334678567},{"translateY":"-20%","rotate":"0.6740330256953841deg","duration":2039.8795309639956},{"translateY":"-21%","rotate":"0.7300790300374214deg","duration":2062.003728928628},{"translateY":"-21%","rotate":"-1.6356099611324382deg","duration":2256.6922809192624},{"translateY":"-21%","rotate":"-0.9042090251583401deg","duration":2321.3180355262143},{"translateY":"-20%","rotate":"0.2217783564013942deg","duration":2455.3119497011135},{"translateY":"-19%","rotate":"2.313154857240404deg","duration":2910.613533472121},{"translateY":"-17%","rotate":"-0.9762100669762508deg","duration":1680.3090867564251},{"translateY":"-14%","rotate":"1.1217448563057753deg","duration":2983.450297170299},{"translateY":"-12%","rotate":"1.6542056597257702deg","duration":1913.8701143003127},{"translateY":"-8%","rotate":"0.08702283351037376deg","duration":2606.9507884619575},{"translateY":"-4%","rotate":"-2.41729126162899deg","duration":2590.191366274868},{"translateY":"0%","rotate":"-0.25033008978749605deg","duration":2742.797097119803}],
+			key5: [{"translateY":"-7%","rotate":"-1.3136595128294892deg","duration":2762.8585191036636},{"translateY":"-11%","rotate":"-1.5131355222748721deg","duration":2921.7846558792835},{"translateY":"-14%","rotate":"-1.9112963275473038deg","duration":2374.7464076972637},{"translateY":"-16%","rotate":"1.3055928277656745deg","duration":2456.0583751083104},{"translateY":"-18%","rotate":"2.099687183393141deg","duration":2103.221687265035},{"translateY":"-20%","rotate":"1.8653591418459312deg","duration":2360.9487122968685},{"translateY":"-20%","rotate":"-1.638589274477673deg","duration":2075.2270572235752},{"translateY":"-21%","rotate":"1.3402596364315897deg","duration":2250.9064347817566},{"translateY":"-21%","rotate":"0.09790882872020124deg","duration":2214.9484449481083},{"translateY":"-20%","rotate":"-1.2890078103456881deg","duration":2705.8093318299225},{"translateY":"-19%","rotate":"2.3443883931218075deg","duration":2712.660666938513},{"translateY":"-18%","rotate":"-0.2933488645913185deg","duration":2822.726078114224},{"translateY":"-16%","rotate":"-2.3205646304051584deg","duration":1974.0676976317889},{"translateY":"-13%","rotate":"-1.3835457690762198deg","duration":1829.5173025611998},{"translateY":"-10%","rotate":"-1.6337751287524782deg","duration":1958.541039012407},{"translateY":"-7%","rotate":"1.1967777446116754deg","duration":1573.0825063044736},{"translateY":"-3%","rotate":"0.3782773818336196deg","duration":2008.2803584604562},{"translateY":"-1%","rotate":"-1.4027911475930643deg","duration":2991.242867015288}],
+			key6: [{"translateY":"-7%","rotate":"-0.2851339481699613deg","duration":1828.872654431751},{"translateY":"-10%","rotate":"-0.09969043629632601deg","duration":2569.218091256566},{"translateY":"-13%","rotate":"0.931273929759767deg","duration":2559.1349022624713},{"translateY":"-16%","rotate":"1.5539257714747965deg","duration":1877.2373612778679},{"translateY":"-18%","rotate":"1.7676140866968577deg","duration":1919.3588849990858},{"translateY":"-19%","rotate":"-2.4532886607048465deg","duration":2763.5399529169717},{"translateY":"-20%","rotate":"1.5266085320887504deg","duration":2908.4009373196077},{"translateY":"-21%","rotate":"2.4888180221851064deg","duration":2102.2191191799543},{"translateY":"-21%","rotate":"-0.25557284417692916deg","duration":2555.6349679938776},{"translateY":"-21%","rotate":"-1.253340260381387deg","duration":1580.7957394619864},{"translateY":"-20%","rotate":"2.121587914282098deg","duration":1711.8073887879427},{"translateY":"-18%","rotate":"0.8082362308755622deg","duration":2403.729932020858},{"translateY":"-16%","rotate":"0.2746836778298025deg","duration":1842.3577274109407},{"translateY":"-14%","rotate":"-2.3780758998709772deg","duration":1929.5553190940918},{"translateY":"-11%","rotate":"2.222355452189765deg","duration":2607.9050341416005},{"translateY":"-7%","rotate":"1.0660928354683374deg","duration":1557.9877512515388},{"translateY":"-3%","rotate":"1.8553330785526798deg","duration":1654.19658456945},{"translateY":"-1%","rotate":"1.604427230394391deg","duration":2454.650155907618}]
+		}
+		function setAnimation(animIndex) {
+			animation = anime({
+				targets: $('.parallax-slide').find('.large-slider-sofa').toArray()[0],
+				keyframes: anims[animIndex],
+				direction: 'alternate',
+				loop: true,
+				autoplay: true,
+				easing: 'linear'
+			});
+		}
+	</script>
+</body>
+</html>

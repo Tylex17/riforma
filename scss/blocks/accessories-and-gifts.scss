@@ -1,0 +1,27 @@
+.accessories
+{
+	.section__title
+	{
+		margin-bottom: 0;
+	}
+}
+.accessories-wr
+{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+@media (max-width: $medium)
+{
+	.accessories-wr
+	{
+		flex-wrap: nowrap;
+	}
+}
+@media (max-width: $mobile)
+{
+	.accessories
+	{
+		display: none;
+	}
+}

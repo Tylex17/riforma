@@ -1,0 +1,352 @@
+.personal
+{
+	margin-bottom: 170px;
+}
+
+.personal__top
+{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+
+	.personal__item
+	{
+		width: calc(50% - 20px);
+	}
+}
+
+.personal__item
+{
+	background-color: #F6F6F6;
+	padding: 25px 40px;
+	width: 100%;
+	position: relative;
+}
+
+.personal__top
+{
+	margin-bottom: 24px;
+}
+
+.personal__item-title
+{
+	margin-bottom: 26px;
+	font-size: 22px;
+	line-height: 24px;
+	font-family: $second-font;
+}
+
+.personal__item-title_orders
+{
+	margin-bottom: 4px;
+}
+
+.personal__item-change
+{
+	position: absolute;
+	color: #B1B1B1;
+	font-size: 14px;
+	line-height: 34px;
+	right: 31px;
+	top: 22px;
+	cursor: pointer;
+	justify-content: flex-end;
+}
+
+.personal__item-change-ctrl-wr
+{
+	display: none;
+}
+.personal__item-change-ctrl
+{
+	display: flex;
+	justify-content: space-between;
+}
+
+.personal__input
+{
+	width: 100%;
+	font-size: 14px;
+	border: none;
+	border-bottom: 1px solid #d1d1d1;
+	box-shadow: none;
+	line-height: 19px;
+	background-color: #f6f6f6;
+	display: none;
+	padding-left: 0;
+	border-radius: 0;
+}
+.personal__item-list_right
+{
+	width: 90%;
+	// text-align: right;
+}
+.personal__item-list-address-value
+{
+	line-height: 18px;
+}
+.personal__item-chancged-cancel
+{
+	margin-right: 10px;
+}
+.personal__item-list-name
+{
+	font-size: 14px;
+	line-height: 22px;
+	padding: 7px 0;
+}
+
+.personal__item-list-name
+{
+	font-size: 14px;
+	line-height: 22px;
+	font-family: $second-font;
+	min-width: 100px;
+	padding: 7px 0;
+}
+
+.personal-order
+{
+	&:not(:last-child) .personal-order__top,
+	&:not(:last-child) .personal-order__bot
+	{
+		border-bottom: 1px solid #B1B1B1;
+	}
+}
+.personal-order__top
+{
+	display: flex;
+	justify-content: space-between;
+	padding: 32px 0;
+	cursor: pointer;
+	transition: all .2s;
+
+	.chevron
+	{
+		transform: rotate(0deg);
+		display: none;
+		transition: all .125s;
+		transform-origin: 5px 3px;
+	}
+
+}
+.personal-order:not(:last-child)  .personal-order__top.dropdown-activator_active
+{
+	border-bottom-color: transparent;
+	transition: all 0s;
+}
+.personal-order__top.dropdown-activator_active
+{
+	border-bottom-color: transparent;
+	transition: all 0s;
+	.chevron
+	{
+		transform: rotate(180deg);
+	}
+	.personal-order__btn
+	{
+		.personal-order__btn-hidden
+		{
+			display: none;
+		}
+		.personal-order__btn-showed
+		{
+			display: block;
+		}
+	}
+}
+
+.personal-order__btn-wr
+{
+	color: #B1B1B1;
+	cursor: pointer;
+	line-height: 18px;
+}
+
+.personal-order__btn
+{
+	border: none;
+	outline: none;
+	.personal-order__btn-hidden
+	{
+		display: block;
+	}
+	.personal-order__btn-showed
+	{
+		display: none;
+	}
+}
+
+.personal-order__name
+{
+	font-size: 14px;
+	line-height: 18px;
+	span
+	{
+		font-family: $second-font;
+	}
+}
+
+.personal-order__bot
+{
+	display: none;
+	padding-bottom: 20px;
+}
+
+@media (min-width: $large)
+{
+	.personal__item-title,
+	{
+		font-size: 1.3rem;
+	}
+	.personal-nav-item a,
+	.personal-nav-logout,
+	.personal__item-list-name,
+	.personal__item-list_right,
+	.personal__input,
+	.personal-order__name,
+	.personal-order__btn-wr
+	{
+		font-size: 0.9rem;
+	}
+	.personal-nav-logout
+	{
+		max-width: 150px;
+		height: 43px;
+	}
+}
+
+@media (max-width: 1310px)
+{
+	.personal__item-title
+	{
+		font-size: 18px;
+	}
+	.personal__item-change
+	{
+		font-size: 13px;
+	}
+}
+
+@media (max-width: $medium)
+{
+	.personal__top .personal__item
+	{
+		width: 100%;
+
+		&:not(:last-child)
+		{
+			margin-bottom: 24px;
+		}
+	}
+
+}
+@media (max-width: $mobile)
+{
+	.personal__title
+	{
+		line-height: 19px;
+	}
+
+	.personal-order__btn
+	{
+		display: none;
+	}
+	.personal-order__top
+	{
+		padding: 23px 0;
+		display: flex;
+		align-items: center;
+		.chevron
+		{
+			display: inline-block;
+			position: relative;
+			top: -2px;
+		}
+	}
+	.personal
+	{
+		margin-bottom: 29px;
+	}
+
+	.personal__item
+	{
+		padding: 24px 21px;
+
+	}
+
+	.personal__info,
+	.personal__contacts
+	{
+		padding-bottom: 40px;
+	}
+
+	.personal__orders
+	{
+		padding-bottom: 10px;
+	}
+
+	.personal__item-change
+	{
+		bottom: 0;
+		right: auto;
+		top: auto;
+		left: 22px;
+		font-size: 10px;
+	}
+
+	.personal__item-title
+	{
+		font-size: 15px;
+		line-height: 15px;
+		margin-bottom: 13px;
+	}
+
+	.personal__item-list-name,
+	.personal__item-list-value
+	{
+		font-size: 14px;
+		line-height: 25px;
+		padding: 10px 0;
+		vertical-align: top;
+	}
+	.personal__item-change-btn
+	{
+		font-size: 14px;
+	}
+	.personal__input
+	{
+		font-size: 14px;
+		line-height: 14px;
+		padding-right: 0;
+		text-align: right;
+	}
+	.personal__item-list_right
+	{
+		text-align: right;
+	}
+	.personal__item-list
+	{
+		width: 100%;
+		table
+		{
+			width: 100%;
+		}
+	}
+	.personal__item-chancged-cancel,
+	.personal__item-chancged-save
+	{
+		font-size: 12px;
+	}
+	.personal__item-list-value
+	{
+		text-align: right;
+	}
+
+	.personal-order__name
+	{
+		font-size: 14px;
+		line-height: 21px;
+	}
+
+}

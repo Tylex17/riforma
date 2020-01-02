@@ -1,0 +1,49 @@
+{% if  not pictureRight %}
+	<div class="collections-item">
+		<div class="collections-item__title">{{ model }}</div>
+		<div class="collections-item-wr">
+			<div class="collections-item__picture">
+				<picture>
+					<source data-srcset="img/assets/collections-item-pic-phone.jpg, img/assets/collections-item-pic-phone@2x.jpg 2x" media="(max-width: 740px)">
+					<source data-srcset="img/assets/collections-item-pic-medium.jpg, img/assets/collections-item-pic-medium@2x.jpg 2x" media="(max-width: 1200px)">
+					<source data-srcset="img/assets/collections-item-pic.jpg, img/assets/collections-item-pic@2x.jpg 2x">
+					<img data-src="img/assets/collections-item-pic.jpg" class="lazy-image" alt="">
+				</picture>
+			</div>
+			<div class="collections-item__cards">
+				{% include "collections-item-card.twig" %}
+				{% include "collections-item-card.twig" %}
+				{% include "collections-item-card.twig" %}
+				{% include "collections-item-card.twig" %}
+				{% include "collections-item-card.twig" %}
+				<a class="collections-item__more">
+					<span class="collections-item__more-text">Ещё 30+ вариантов</span>
+				</a>
+			</div>
+		</div>
+	</div>
+{% else %}
+	<div class="collections-item collections__item_pic-right">
+		<div class="collections-item__title">{{ model }}</div>
+		<div class="collections-item-wr">
+			<div class="collections-item__cards">
+				{% include "collections-item-card.twig" %}
+				{% include "collections-item-card.twig" %}
+				{% include "collections-item-card.twig" %}
+				{% include "collections-item-card.twig" %}
+				{% include "collections-item-card.twig" %}
+				<a class="collections-item__more">
+					<span class="collections-item__more-text">Ещё 30+ вариантов</span>
+				</a>
+			</div>
+			<div class="collections-item__picture">
+				<picture>
+					<source data-srcset="img/assets/collections-item-pic-phone.jpg, img/assets/collections-item-pic-phone@2x.jpg 2x" media="(max-width: 740px)">
+					<source data-srcset="img/assets/collections-item-pic-medium.jpg, img/assets/collections-item-pic-medium@2x.jpg 2x" media="(max-width: 1200px)">
+					<source data-srcset="img/assets/collections-item-pic.jpg, img/assets/collections-item-pic@2x.jpg 2x">
+					<img data-src="img/assets/collections-item-pic.jpg" class="lazy-image" alt="">
+				</picture>
+			</div>
+		</div>
+	</div>
+{% endif %}

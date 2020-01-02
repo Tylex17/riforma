@@ -1,0 +1,82 @@
+.shops-popup,
+.shops-popup__tabs-container
+{
+	max-width: 1152px;
+	padding-right: 75px;
+	padding-left: 125px;
+}
+.shops-popup
+{
+	padding-bottom: 20px;
+	padding-top: 172px;
+	.discount-center__top
+	{
+		display: flex;
+		justify-content: space-between;
+	}
+	.popup-slider
+	{
+		margin-bottom: 40px;
+	}
+}
+
+@media (max-width: $medium)
+{
+	.shops-popup,
+	.shops-popup__tabs-container
+	{
+		max-width: 80vw;
+		padding-left: 100px;
+	}
+	.shops-popup
+	{
+		padding-top: 130px;
+	}
+}
+@media (max-width: $tablet)
+{
+	.shops-popup
+	{
+		padding-top: 100px;
+	}
+}
+@media (max-width: $mobile)
+{
+	.shops-popup,
+	._tabs-container
+	{
+		max-width: 90vw;
+		padding-left: 21px;
+		padding-right: 20px;
+	}
+	.shops-popup
+	{
+		padding-top: 39px;
+
+		.discount-center__menu
+		{
+			width: 100% !important;
+			margin-bottom: 31px;
+		}
+		.mobile-filter-wr
+		{
+			padding-bottom: 25px;
+		}
+		.popup-slider
+		{
+			margin-right: -20px;
+			margin-top: 15px;
+			margin-bottom: 17px;
+		}
+		.popup-slide-wr
+		{
+			max-width: 234px;
+			margin-right: 9px;
+		}
+		.popup-slide
+		{
+			height: 174px;
+			min-height: 174px;
+		}
+	}
+}

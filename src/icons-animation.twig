@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Анимации иконок</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<style>
+		.animations
+		{
+			max-width: 960px;
+			padding-left: 10px;
+			padding-right: 10px;
+			margin-left: auto;
+			margin-right: auto;
+			padding-top: 45px;
+			padding-bottom: 66px;
+		}
+		.animations__title
+		{
+			font-size: 36px;
+			text-align: center;
+			margin-bottom: 25px;
+		}
+		.animations__icon
+		{
+			margin-bottom: 7px;
+		}
+		.animations__icon svg
+		{
+			overflow: visible;
+		}
+		.animations__desc
+		{
+			font-size: 16px;
+		}
+		.animations__list
+		{
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+			-webkit-flex-wrap: wrap;
+			-moz-flex-wrap: wrap;
+			-ms-flex-wrap: wrap;
+			-o-flex-wrap: wrap;
+			flex-wrap: wrap;
+		}
+		.animations__item
+		{
+			flex-basis: 33.33%;
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+			-webkit-flex-direction: column;
+			-moz-flex-direction: column;
+			-ms-flex-direction: column;
+			-o-flex-direction: column;
+			flex-direction: column;
+			margin-bottom: 50px;
+			-ms-align-items: flex-start;
+			align-items: flex-start;
+		}
+	</style>
+</head>
+<body>
+	{% include "../img/svg-symbols.svg" %}
+	<div class="container animations">
+		<div class="animations__title">Анимации</div>
+		<div class="animations__list">
+			<div class="animations__item">
+				<div class="animations__icon" data-sofa-type="straight" onmouseenter="o2.animations.sofaIcon.enter(this)" onmouseleave="o2.animations.sofaIcon.leave(this)">
+					<svg role="img" class="straight-sofa-logo">
+						<use xlink:href="#straight-sofa-logo"></use>
+					</svg>
+				</div>
+				<div class="animations__desc">
+					Прямые диваны
+				</div>
+			</div>
+			<div class="animations__item">
+				<div class="animations__icon" data-sofa-type="cornering" onmouseenter="o2.animations.sofaIcon.enter(this)" onmouseleave="o2.animations.sofaIcon.leave(this)">
+					<svg role="img" class="corner-sofa-logo">
+						<use xlink:href="#corner-sofa-logo"></use>
+					</svg>
+				</div>
+				<div class="animations__desc">
+					Угловые диваны
+				</div>
+			</div>
+			<div class="animations__item">
+				<div class="animations__icon" data-sofa-type="armchair" onmouseenter="o2.animations.sofaIcon.enter(this)" onmouseleave="o2.animations.sofaIcon.leave(this)">
+					<svg role="img" class="armchairs-logo">
+						<use xlink:href="#armchairs-logo"></use>
+					</svg>
+				</div>
+				<div class="animations__desc">
+					Кресла
+				</div>
+			</div>
+			<div class="animations__item">
+				<div class="animations__icon" data-sofa-type="small" onmouseenter="o2.animations.sofaIcon.enter(this)" onmouseleave="o2.animations.sofaIcon.leave(this)">
+					<svg xmlns="http://www.w3.org/2000/svg" width="51.915" height="12.36" viewBox="0 0 51.915 12.36">
+						<g data-name="Group 1245">
+							<g data-name="Group 1003" fill="#613175">
+								<path class="small-part-1" data-name="Path 4781" d="M0 0v12.36h21.915V0z"/>
+								<path class="small-part-2" data-name="Path 4782" d="M30 0v12.36h21.915V0z"/>
+							</g>
+						</g>
+					</svg>
+				</div>
+				<div class="animations__desc">
+					Малые формы
+				</div>
+			</div>
+			<div class="animations__item">
+				<div class="animations__icon" data-sofa-type="modular" onmouseenter="o2.animations.sofaIcon.enter(this)" onmouseleave="o2.animations.sofaIcon.leave(this)">
+					<svg xmlns="http://www.w3.org/2000/svg" width="107" height="29.36" viewBox="0 0 107 29.36">
+						<g data-name="Group 1312">
+							<path class="modular-part-1" data-name="Path 5236" d="M5.02 16.966l-4.1 1.427v10.835h44.848v-12.36H16.324L9.905.001.005 3.77z" fill="#613175"/>
+							<g data-name="Group 1246">
+								<g data-name="Group 1003" fill="#613175">
+									<path class="modular-part-2" data-name="Path 4781" d="M55.084 17v12.36h21.915V17z"/>
+									<path class="modular-part-3" data-name="Path 4782" d="M85.084 17v12.36h21.915V17z"/>
+								</g>
+							</g>
+						</g>
+					</svg>
+				</div>
+				<div class="animations__desc">
+					Модульные диваны
+				</div>
+			</div>
+			<div class="animations__item">
+				<div class="animations__icon" data-sofa-type="complects" onmouseenter="o2.animations.sofaIcon.enter(this)" onmouseleave="o2.animations.sofaIcon.leave(this)">
+					<svg xmlns="http://www.w3.org/2000/svg" width="123.935" height="29.228" viewBox="0 0 123.935 29.228">
+						<g data-name="Group 1247">
+							<g data-name="Group 783" fill="#613175">
+								<path class="complects-part-1" data-name="Path 4372" d="M5.02 16.965l-4.1 1.427v10.835h44.848v-12.36H16.324L9.905 0l-9.9 3.769zM94.02 16.965l-4.1 1.427v10.835h34.015v-12.36h-18.611L98.905 0l-9.9 3.769z"/>
+								<g class="complects-part-2" data-name="Group 66" stroke="#613175" stroke-width="3">
+									<path data-name="Rectangle 165" d="M62 15.039v-1.813h11.333v1.813z"/>
+									<path data-name="Rectangle 166" d="M66.76 8.466h1.813v11.333H66.76z"/>
+								</g>
+							</g>
+						</g>
+					</svg>
+				</div>
+				<div class="animations__desc">
+					Комплекты
+				</div>
+			</div>
+			<div class="animations__item">
+				<div class="animations__icon" data-sofa-type="sale" onmouseenter="o2.animations.sofaIcon.enter(this)" onmouseleave="o2.animations.sofaIcon.leave(this)">
+					<svg role="img" class="sale-logo">
+						<use xlink:href="#sale-logo"></use>
+					</svg>
+				</div>
+				<div class="animations__desc">
+					Распродажа
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<script>
+		window.placemarkImgURL = 'img/assets/marker.svg'
+		window.shopsCoordinate = {
+			'москва': [
+				{
+					id:1,
+					date: '4 октября',
+					name: 'SC GAGARINSKIY',
+					coords: [55.707086, 37.591793],
+					address: "м. Автозаводская, ул. Ленинская  Слобода, д. 26, ТЦ Румер",
+					phone: "+7 (499) 406-01-98",
+					worktime: "10.00 – 22.00"
+
+				},
+				{
+					id: 2,
+					date: '14 октября',
+					name: 'AfIMALL CITY',
+					coords: [55.748963, 37.539070],
+					address: "м. Автозаводская, ул. Ленинская  Слобода, д. 26, ТЦ Румер",
+					phone: "+7 (499) 406-01-98",
+					worktime: "10.00 – 22.00"
+				},
+				{
+					id: 3,
+					date: '24 октября',
+					name: 'Avia Park',
+					coords: [55.790488, 37.531356],
+					address: "м. Автозаводская, ул. Ленинская  Слобода, д. 26, ТЦ Румер",
+					phone: "+7 (499) 406-01-98",
+					worktime: "10.00 – 22.00"
+				}
+			],
+			'калуга': [
+				{
+					id: 1,
+					date: '1 сентября',
+					name: 'SC GAGARINSKIY',
+					coords: [43.048978, 44.682405],
+					address: "м. Автозаводская, ул. Ленинская  Слобода, д. 26, ТЦ Румер",
+					phone: "+7 (499) 406-01-98",
+					worktime: "10.00 – 22.00"
+				},
+				{
+					id: 2,
+					date: '1 августа',
+					name: 'AfIMALL CITY',
+					coords: [43.051661, 44.668657],
+					address: "м. Автозаводская, ул. Ленинская  Слобода, д. 26, ТЦ Румер",
+					phone: "+7 (499) 406-01-98",
+					worktime: "10.00 – 22.00"
+				},
+				{
+					id: 3,
+					date: '24 января',
+					name: 'Avia Park',
+					coords: [43.064834, 44.652149],
+					address: "м. Автозаводская, ул. Ленинская  Слобода, д. 26, ТЦ Румер",
+					phone: "+7 (499) 406-01-98",
+					worktime: "10.00 – 22.00"
+				},
+				{
+					id: 4,
+					date: '24 января',
+					name: 'Avia Park',
+					coords: [43.094834, 44.632149],
+					address: "м. Автозаводская, ул. Ленинская  Слобода, д. 26, ТЦ Румер",
+					phone: "+7 (499) 406-01-98",
+					worktime: "10.00 – 22.00"
+				},
+				{
+					id: 5,
+					date: '24 января',
+					name: 'Avia Park',
+					coords: [43.065834, 44.612149],
+					address: "м. Автозаводская, ул. Ленинская  Слобода, д. 26, ТЦ Румер",
+					phone: "+7 (499) 406-01-98",
+					worktime: "10.00 – 22.00"
+				},
+			],
+			'брянск': [
+				{
+					id: 1,
+					date: '1 сентября',
+					name: 'SC GAGARINSKIY',
+					coords: [43.148978, 44.682405],
+					address: "м. Автозаводская, ул. Ленинская  Слобода, д. 26, ТЦ Румер",
+					phone: "+7 (499) 406-01-98",
+					worktime: "10.00 – 22.00"
+				},
+				{
+					id: 2,
+					date: '1 августа',
+					name: 'AfIMALL CITY',
+					coords: [43.151661, 44.668657],
+					address: "м. Автозаводская, ул. Ленинская  Слобода, д. 26, ТЦ Румер",
+					phone: "+7 (499) 406-01-98",
+					worktime: "10.00 – 22.00"
+				},
+				{
+					id: 3,
+					date: '24 января',
+					name: 'Avia Park',
+					coords: [43.164834, 44.652149],
+					address: "м. Автозаводская, ул. Ленинская  Слобода, д. 26, ТЦ Румер",
+					phone: "+7 (499) 406-01-98",
+					worktime: "10.00 – 22.00"
+				}
+			],
+		}
+
+	</script>
+	<script type="text/javascript" src="js/main.min.js"></script>
+</body>
+</html>

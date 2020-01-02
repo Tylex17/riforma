@@ -1,0 +1,113 @@
+<div class="product-sidebar sticky-sidebar-element">
+	<div class="product-sidebar__image">
+		<picture>
+			<source data-srcset="img/assets/product-sidebar-img.png, img/assets/product-sidebar-img@2x.png 2x">
+			<img data-src="img/assets/product-sidebar-img.png" class="lazy-image">
+		</picture>
+	</div>
+	<div class="product-card__basic">
+		<div class="product-card__basic-name">
+			Vinsent
+		</div>
+		<!-- <div class="dropdown-wr"> -->
+			<div class="product-card__types dropdown-wr">
+				<div class="product-card__title dropdown-activator" onclick="o2.dropdown.toggle(this)">
+					<div class="product-card__info-title product-card__types-name">
+						Модель: <span class="product-card__sofa-type">прямой диван</span>
+					</div>
+					<div class="product-card__arrow">
+						<svg xmlns="http://www.w3.org/2000/svg" width="11.344" height="6.012" viewBox="0 0 11.344 6.012">
+							<path id="Path_4292" data-name="Path 4292" d="M0,0,2.576,2.662,5.153,5.324,2.576,7.986,0,10.648" transform="translate(10.996 0.359) rotate(90)" fill="none" stroke="#b1b1b1" stroke-linejoin="round" stroke-width="1.001"/>
+						</svg>
+					</div>
+				</div>
+				<div class="product-card__sofa-list dropdown-list">
+					<div class="filter-group product-card__filter-group">
+						{% set sofaTypes = ['Прямой диван', 'Угловой диван', 'Кресло', 'Модульный диван'] %}
+						{% for type in sofaTypes %}
+							<div class="filter-property filter-radio" onclick="o2.productCard.sideBar.selectSofaType(this)">
+								<label class="o-radio">
+									{% if loop.first %}
+										<input type="radio" class="o-radio__input" name="sofaType" checked="checked">
+									{% else %}
+										<input type="radio" class="o-radio__input" name="sofaType">
+									{% endif %}
+									<div class="o-radio__body">
+										<span class="o-radio__box"></span>
+										<span class="o-radio__text">{{ type }}</span>
+									</div>
+								</label>
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+		<!-- </div> -->
+		<div class="dropdown-wr">
+			<div class="product-card__dimension">
+				<div class="product-card__title dropdown-activator" onclick="o2.dropdown.toggle(this)">
+					<div class="product-card__info-title product-card__dimension-title">
+						Габариты: 200x300x92cм
+					</div>
+					<div class="product-card__arrow">
+						<svg xmlns="http://www.w3.org/2000/svg" width="11.344" height="6.012" viewBox="0 0 11.344 6.012">
+							<path id="Path_4292" data-name="Path 4292" d="M0,0,2.576,2.662,5.153,5.324,2.576,7.986,0,10.648" transform="translate(10.996 0.359) rotate(90)" fill="none" stroke="#b1b1b1" stroke-linejoin="round" stroke-width="1.001"/>
+						</svg>
+					</div>
+				</div>
+				<div class="product-card__dimension-params dropdown-list">
+					<div class="filter-slider">
+						<div class="filter-slider__label">Ширина</div>
+						{% include 'range-slider.twig' with {fieldName: 'namge', type: 'range', min: 120, max: 190, from: 120, to: 190} %}
+					</div>
+					<div class="filter-slider">
+						<div class="filter-slider__label">Длина</div>
+						{% include 'range-slider.twig' with {fieldName: 'namge', type: 'range', min: 120, max: 190, from: 120, to: 190} %}
+					</div>
+					<div class="filter-slider">
+						<div class="filter-slider__label">Высота</div>
+						{% include 'range-slider.twig' with {fieldName: 'namge', type: 'range', min: 120, max: 190, from: 120, to: 190} %}
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="product-card__materials product-sidebar__materials dropdown-wr">
+			<div class="product-card__title dropdown-activator" onclick="o2.dropdown.toggle(this)">
+				<div class="product-card__info-title product-card__materials-title">
+					Материал:
+				</div>
+				<div class="product-card__arrow">
+					<svg xmlns="http://www.w3.org/2000/svg" width="11.344" height="6.012" viewBox="0 0 11.344 6.012">
+						<path id="Path_4292" data-name="Path 4292" d="M0,0,2.576,2.662,5.153,5.324,2.576,7.986,0,10.648" transform="translate(10.996 0.359) rotate(90)" fill="none" stroke="#b1b1b1" stroke-linejoin="round" stroke-width="1.001"/>
+					</svg>
+				</div>
+			</div>
+			<div class="product-card__materials-descr dropdown-list">
+				Бежевый велюр Triniti
+				с&nbsp;грязеотталкивающей <br>
+				технологией + Венге
+			</div>
+		</div>
+		<div class="btn btn_accent product-sidebar__btn">Купить за 35990₽</div>
+		<div class="product-sidebar__sections-list">
+				<a href="#description" class="product-sidebar__section" onclick="o2.productCard.sideBar.scrollToSection('#description', event)">
+					Описание
+				</a>
+				<a href="#spec" class="product-sidebar__section" onclick="o2.productCard.sideBar.scrollToSection('#spec', event)">
+					Характеристики
+				</a>
+				<a href="#modelsInStock" class="product-sidebar__section" onclick="o2.productCard.sideBar.scrollToSection('#modelsInStock', event)">
+					Модели в наличии
+				</a>
+				<a href="#reviews" class="product-sidebar__section" onclick="o2.productCard.sideBar.scrollToSection('#reviews', event)">
+					Отзывы
+				</a>
+				<a href="#accessories" class="product-sidebar__section" onclick="o2.productCard.sideBar.scrollToSection('#accessories', event)">
+					Аксессуары и подарки
+				</a>
+				<a href="#pay" class="product-sidebar__section" onclick="o2.productCard.sideBar.scrollToSection('#pay', event)">
+					Оплата и доставка
+				</a>
+		</div>
+	</div>
+</div>

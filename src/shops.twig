@@ -1,0 +1,72 @@
+{# index.twig #}
+{% extends "layouts/layout.twig" %}
+
+{% block page %}
+	{% include "./blocks/breadcrumbs.twig" %}
+	<section class="shops">
+		<div class="shops__title">Поиск магазина</div>
+		<div class="shops__content">
+			<div class="shops__left">
+				<div class="shops__text">
+					Введите адресные данные (например: почтовый индекс, город, улица, …), и мы покажем Вам ближайшие магазины.
+				</div>
+				<div class="shops__fields">
+					<div class="shops__field">
+						<div class="shops__field-label">Регион</div>
+						<div class="shops-select">
+							<div class="shops-select__selected" onclick="o2.shops.countrySelectDropdownToggle();">
+								<div class="shops-select__selected-name _shops-select-name">Москва</div>
+								<div class="shops-select__arrow">
+									<svg role="img" class="arrow-down">
+										<use xlink:href="#arrow-down"></use>
+									</svg>
+								</div>
+							</div>
+							<div class="shops-select-list">
+								<div class="shops-select-list__label">
+									Выберите ваш регион:
+								</div>
+								<ul class="shops-select-list__items header-contacts-city-list__items">
+									<li class="shops-select-list__item" onclick="o2.shops.selectCountry(this);" data-city-key="калуга">Калуга</li>
+									<li class="shops-select-list__item" onclick="o2.shops.selectCountry(this);" data-city-key="брянск">Брянск</li>
+									<li class="shops-select-list__item" onclick="o2.shops.selectCountry(this);" data-city-key="томск">Томск</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- <div class="shops__field">
+						<label class="input-wr cart-info__input">
+							<input type="email" class="input _required" value="" onkeyup="this.setAttribute('value', this.value);" onchange="this.setAttribute('value', this.value);">
+							<div class="input__label">Город, почтовый индекс, улица</div>
+						</label>
+					</div> -->
+					<button class="btn btn_accent shops__button" onclick="o2.shops.listOfCityShops()">Поиск</button>
+				</div>
+				<div class="shops__results">
+					<div class="shops__results-title">Магазины города: <span class="shops__results-city">Москва</span></div>
+					<div class="shops__results-items">
+						<!-- <div class="shops-results-item">
+							<div class="shops-results-item__top" onclick="o2.shops.toggleAccordeon(this);">
+								<div class="shops-results-item__address">
+								<span class="shops-results-item__city">#city#</span>
+								<svg role="img" class="arrow-down">
+									<use xlink:href="#arrow-down"></use>
+								</svg>
+							</div>
+								<div class="shops-results-item__name">#shopName#</div>
+							</div>
+							<div class="shops-results-item__bot">
+								#shopAdress#
+							</div>
+						</div> -->
+					</div>
+				</div>
+			</div>
+			<div class="shops__right" onclick="o2.popups.open('action')">
+				<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=43dd238d-f61d-4f82-bf71-07fba4e77e35" type="text/javascript"></script>
+				<div class="map-shops shops__map _map" id="map" data-map="large"></div>
+			</div>
+		</div>
+	</section>
+	{% include "./blocks/popup-shops.twig" %}
+{% endblock %}

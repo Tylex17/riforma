@@ -1,0 +1,233 @@
+.riforma-furniture-slider
+{
+	position: relative;
+	.slick-dots
+	{
+		bottom: -30px;
+		left: 0;
+		text-align: left;
+
+	}
+	.slick-dots li
+	{
+		width: 18px;
+		height: 18px;
+		margin: 0;
+		&:not(:last-child)
+		{
+			margin-right: 15px;
+		}
+	}
+	.slick-dots li button
+	{
+		width: 18px;
+		height: 18px;
+		font-size: 17px;
+		color: $accent-color;
+		font-family: $second-font;
+		padding: 0;
+	}
+	.slick-dots li button:before
+	{
+		display: none;
+	}
+	.slick-dots li.slick-active button
+	{
+		transition: .2s;
+		background-color: $accent-color;
+		border-radius: 50%;
+		color: transparent;
+		padding-top: 2px;
+	}
+	.large-slider-slide
+	{
+		height: 0;
+		padding-bottom: 61%;
+		img
+		{
+			width: 100%;
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			object-fit: cover;
+		}
+	}
+}
+.why-riforma-wr
+{
+	display: flex;
+	justify-content: flex-end;
+	padding-top: 65px;
+	padding-bottom: 132px;
+}
+.why-riforma__text
+{
+	font-family: $second-font;
+	font-size: 22px;
+	line-height: 38px;
+	max-width: 810px;
+}
+
+.main-products-wr
+{
+	padding-bottom: 145px;
+}
+.main-products-more
+{
+	display: flex;
+	justify-content: center;
+	padding-top: 0;
+}
+.main-products-more__btn
+{
+	width: 220px;
+	font-family: $second-font;
+	font-size: 16px;
+	height: 57px;
+}
+
+.riforma-furniture
+{
+	padding-top: 70px;
+	padding-bottom: 123px;
+}
+.riforma-furniture-descr__text
+{
+	font-family: $second-font;
+	font-size: 22px;
+	line-height: 40px;
+	max-width: 850px;
+	padding-top: 50px;
+}
+.index-map
+{
+	padding-top: 90px;
+	padding-bottom: 145px;
+}
+
+@media (min-width: $large)
+{
+	.why-riforma__text,
+	.riforma-furniture-descr__text
+	{
+		font-size: 1.238rem;
+		line-height: 1.9rem;
+	}
+}
+@media (max-width: $medium)
+{
+	.main-products-wr
+	{
+		padding-bottom: 42px;
+	}
+	.main-products-more__btn
+	{
+		width: 200px;
+		height: 50px;
+		font-size: 15px;
+		line-height: 18px;
+	}
+
+	.why-riforma-wr
+	{
+		padding-top: 39px;
+		padding-bottom: 70px;
+	}
+	.why-riforma__text
+	{
+		max-width: 540px;
+		font-size: 17px;
+		line-height: 28px;
+	}
+	.riforma-furniture
+	{
+		padding-bottom: 56px;
+
+	}
+	.riforma-furniture-descr__text
+	{
+		font-size: 17px;
+		line-height: 28px;
+		max-width: 540px;
+	}
+	.riforma-furniture-descr__text-str
+	{
+		display: none;
+		word-break: keep-all;
+	}
+	.index-map
+	{
+		padding-top: 53px;
+		padding-bottom: 75px;
+	}
+}
+
+@media (max-width: $tablet)
+{
+	.why-riforma-wr
+	{
+		padding-top: 30px;
+		padding-bottom: 55px;
+	}
+	.why-riforma__text
+	{
+		max-width: 380px;
+	}
+	.why-riforma__text_tb-hide
+	{
+		display: none;
+	}
+	.riforma-furniture
+	{
+		padding-top: 24px;
+		padding-bottom: 50px;
+	}
+	.index-map
+	{
+		padding-top: 53px;
+		padding-bottom: 0;
+	}
+}
+
+@media (max-width: $mobile)
+{
+	.why-riforma-wr
+	{
+		padding-top: 25px;
+		padding-bottom: 28px;
+	}
+	.why-riforma__text
+	{
+		font-size: 17px;
+		line-height: 25px;
+		max-width: 100%;
+	}
+	.why-riforma__text_tb-hide
+	{
+		display: inline;
+	}
+
+	.riforma-furniture
+	{
+		padding-bottom: 67px;
+	}
+	.riforma-furniture-descr
+	{
+		display: flex;
+		justify-content: flex-end;
+	}
+	.riforma-furniture-descr__text
+	{
+		font-size: 17px;
+		line-height: 25px;
+		max-width: 100%;
+		padding-top: 51px;
+		padding-bottom: 45px;
+	}
+	.riforma-furniture-descr__text-str
+	{
+		display: inline;
+	}
+}

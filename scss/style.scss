@@ -1,0 +1,215 @@
+/* ********************** */
+@import 'svg-symbols';
+/* vendors */
+@import 'vendors/slick';
+@import 'vendors/slick-theme';
+@import 'vendors/no-ui-slider';
+
+/* base */
+@import 'base/variables';
+@import 'base/fonts';
+@import 'base/normalize';
+@import 'base/typography';
+@import 'base/controls';
+
+/* layouts */
+@import 'layouts/default';
+@import 'layouts/popup-body';
+@import 'layouts/popover';
+
+/* blocks */
+@import 'blocks/header';
+@import 'blocks/orderItem';
+@import 'blocks/large-slider';
+@import 'blocks/breadcrumbs';
+@import 'blocks/filter';
+@import 'blocks/popup-mobile-menu';
+@import 'blocks/products';
+@import 'blocks/product';
+@import 'blocks/sofa-types';
+@import 'blocks/sofa-type';
+@import 'blocks/sale';
+@import 'blocks/actions';
+@import 'blocks/models-in-stock';
+@import 'blocks/models-in-stock-item';
+@import 'blocks/sidebar';
+@import 'blocks/sets';
+@import 'blocks/footer';
+@import 'blocks/map';
+@import 'blocks/small-map';
+@import 'blocks/popup-mobile-menu';
+@import 'blocks/collections';
+@import 'blocks/collections-item';
+@import 'blocks/collections-item-card';
+@import 'blocks/accessories-and-gifts';
+@import 'blocks/accessories-and-gifts-item';
+@import 'blocks/riforma-advantages';
+@import 'blocks/popup-actions';
+@import 'blocks/popup-second-actions';
+@import 'blocks/popup-fabric-gallery';
+@import 'blocks/popup-product-image';
+@import 'blocks/popup-shops';
+@import 'blocks/popup-slider';
+@import 'blocks/popover-login';
+@import 'blocks/popover-request';
+@import 'blocks/product-sidebar';
+@import 'blocks/search-info';
+@import 'blocks/range-slider';
+@import 'blocks/personal-nav';
+
+@import 'pages/index';
+@import 'pages/small-forms';
+@import 'pages/discount-center';
+@import 'pages/catalog-page';
+@import 'pages/collection-catalog';
+@import 'pages/about-brand';
+@import 'pages/404';
+@import 'pages/complects.scss';
+@import 'pages/sale-page';
+@import 'pages/actions-page';
+@import 'pages/product-card';
+@import 'pages/registration';
+@import 'pages/cart';
+@import 'pages/small-forms';
+@import 'pages/personal';
+@import 'pages/order';
+@import 'pages/shops';
+@import 'pages/delivery';
+
+body
+{
+	min-width: 375px;
+}
+a
+{
+	color: #000;
+}
+a:active
+{
+	color: inherit;
+}
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	outline: 0;
+}
+
+*:before,
+*:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+// svg > use { fill: none; }
+
+// прячем svg спрайт, но не скрываем т.к. display: none; ломает градиенты и т.д
+.svg-symbol
+{
+	border: 0 !important;
+	clip: rect(0 0 0 0) !important;
+	height: 1px !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	padding: 0 !important;
+	position: absolute !important;
+	width: 1px !important;
+}
+
+.ymaps-2-1-75-ground-pane
+{
+	filter: grayscale(0.9);
+}
+
+.r-a__2-1
+{
+	transform-origin: center;
+}
+
+.container-wr
+{
+	max-width: 1500px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: 25px;
+	padding-right: 25px;
+	position: relative;
+}
+
+.tab
+{
+	display: none;
+}
+.tab_open
+{
+	display: block;
+}
+
+@media (min-width: $large)
+{
+	html
+	{
+		font-size: 20px;
+	}
+	.container-wr
+	{
+		max-width: 99%;
+	}
+}
+
+@media (max-width: 1750px)
+{
+	html
+	{
+		font-size: 18px;
+	}
+}
+
+@media (max-width: 1700px)
+{
+	html
+	{
+		font-size: 17px;
+	}
+}
+
+@media (max-width: 1550px)
+{
+	html
+	{
+		font-size: 16px;
+	}
+}
+@media (max-width: 1500px)
+{
+	html
+	{
+		font-size: 15px;
+	}
+}
+
+@media (max-width: $medium)
+{
+	.container-wr
+	{
+		max-width: 880px;
+	}
+}
+@media (max-width: $tablet)
+{
+	.container-wr
+	{
+		max-width: 648px;
+	}
+}
+@media (max-width: $mobile)
+{
+	.container-wr
+	{
+		max-width: 480px;
+		padding-left: 22px;
+		padding-right: 22px;
+	}
+}
